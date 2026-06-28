@@ -1,0 +1,68 @@
+:root {
+  /* === COLORS === */
+  --color-primary:#91472b;
+  --color-primary-dark:#7a3a20;
+  --color-primary-light:#ffb59b;
+  --color-primary-container:#af5f41;
+
+  --color-secondary:#5c614d;
+  --color-secondary-container: #e0e5cc;
+
+  --color-tertiary:#655a49;
+  --color-tertiary-container:#7f7360;
+
+  --color-neutral-bg:#f9f9fb;
+  --color-neutral-surface:#edeef0;
+  --color-neutral-text:#2B2D2F;
+
+  /* === TYPOGRAPHY - FAMILIES === */
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Inter', sans-serif;
+  /* === TYPOGRAPHY - WEIGHTS === */
+    --font-thin: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+  /* === TYPOGRAPHY - SIZES === */
+    --font-size-caption:0.75rem;
+    --font-size-label-md:0.875rem;
+    --font-size-body-md:1rem;
+    --font-size-body-lg:1.25rem;
+    --font-size-headline-md:2rem;
+    --font-size-headline-lg:2.5rem;
+    --font-size-headline-xl:3.75rem;
+    --font-size-display-lg:5.25rem;
+
+  /* === SPACING === */
+
+    --space-1: 0.5rem; 
+    --space-2: 1rem;     
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-5: 2.5rem;
+    --space-6: 3rem;
+    --space-8: 4rem;
+    --space-10: 5rem;
+
+    --space-container-max: 1280px;
+    --space-gutter: 2rem;
+    --margin-mobile: 1.25rem;
+    --margin-desktop: 4rem;
+    --section-gap: 7.5rem;
+
+  /* === BORDER RADIUS === */
+    --border-radius-default: 0.5rem;
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.75rem;
+    --border-radius-lg: 1rem;
+    --border-radius-xl: 1.5rem;
+    --border-radius-full: 9999px;
+
+  /* === TRANSITIONS === */
+    --transition-default: all 0.3s ease-in-out;
+
+  /* === SHADOWS === */
+    --shadow-ambient: 0 0 40px rgba(26, 28, 30, 0.04);
+}
