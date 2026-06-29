@@ -1,0 +1,51 @@
+/* === BASE TYPOGRAPHY === */
+body {
+  font-family: var(--font-secondary);
+  color: var(--color-neutral-text);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-regular);
+}
+
+/* === HEADINGS === */
+h1, h2, h3, h4 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-bold);
+  color: var(--color-neutral-text);
+}
+
+h1 { font-size: var(--font-size-headline-xl); }
+h2 { font-size: var(--font-size-headline-lg); }
+h3 { font-size: var(--font-size-headline-md); }
+h4 { font-size: var(--font-size-headline-sm); }
+
+h5, h6 {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-semibold);
+}
+
+h5 { font-size: var(--font-size-body-lg); }
+h6 { font-size: var(--font-size-body-md); }
+
+/* === BODY TEXT === */
+p {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-body-lg);
+  line-height: 1.6;
+}
+
+/* === LABELS & CAPTIONS === */
+label, small {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-label-md);
+  font-weight: var(--font-medium);
+}
+
+/* === LINKS === */
+a {
+  color: var(--color-primary);
+  transition: var(--transition-default);
+}
+
+a:hover {
+  color: var(--color-primary-container);
+}
