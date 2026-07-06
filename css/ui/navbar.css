@@ -13,20 +13,33 @@
     font-family: var(--font-secondary);
     background: transparent;
     color: var(--color-neutral-text);
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .navbar__logo {
     font-family: var(--font-primary);
     font-size: var(--font-size-headline-md);
     color: var(--color-primary);
+    display: flex;
+    align-items: center;
  }
 
 .navbar__links { 
     display: flex;
     gap: var(--space-4);
-    position: absolute;
     top: 100%; 
     width: 100%;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-4);
+    flex: 1;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
 }
 
 .navbar__link { 
