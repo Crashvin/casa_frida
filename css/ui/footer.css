@@ -1,0 +1,76 @@
+/* === FOOTER BASE === */
+.footer { 
+    background-color: var(--color-primary-dark);
+    padding: var(--space-10);
+}
+
+/* === FOOTER TOP === */
+.footer__top { 
+    display: flex;
+    gap: var(--space-5);
+    justify-content: space-between;
+}
+
+/* === COLUMNAS === */
+.footer__columna { 
+    flex: 1;
+}
+
+/* Columna logo más ancha que las demás */
+.footer__columna:first-child { 
+    flex: 2;
+}
+
+/* === TIPOGRAFÍA === */
+.footer__logo {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-md);
+  color: var(--color-neutral-bg);
+  margin-bottom: var(--space-2);
+}
+
+.footer__titulo {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-label-md);
+  font-weight: var(--font-semibold);
+  color: var(--color-neutral-bg);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-3);
+}
+
+.footer__descripcion,
+.footer__texto {
+  font-size: var(--font-size-body-md);
+  color: var(--color-primary-light);
+  line-height: 1.6;
+}
+
+.footer__link {
+  color: var(--color-primary-light);
+  font-size: var(--font-size-body-md);
+  transition: var(--transition-default);
+  display: block;
+  padding: var(--space-1) 0;
+}
+
+.footer__link:hover {
+  color: var(--color-neutral-bg);
+}
+
+/* === FOOTER BOTTOM === */
+.footer__bottom { 
+    border-top: var(--color-primary);
+    text-align: center;
+    padding-top: var(--space-4);
+}
+.footer__disclaimer { 
+    font-size: var(--font-size-caption);
+    color: var(--color-primary-light);
+}
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+  .footer__top { 
+    flex-direction: column;
+  }
+}
