@@ -1,0 +1,64 @@
+/* === BASE === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--border-radius-full);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-label-md);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition-default);
+  white-space: nowrap;
+  text-decoration: none;
+  border: none;
+}
+
+/* === PRIMARY — Terracota sólido === */
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+/* === SECONDARY — Borde transparente === */
+.btn--secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* === GHOST — Solo texto === */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-primary);
+  padding: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+.btn--ghost:hover {
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+  .btn {
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.75rem;
+  }
+}
