@@ -1,0 +1,511 @@
+/* === HERO NOSOTROS === */
+#nosotros-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: var(--space-10);
+  background-image: url('https://placehold.co/1920x1080/1a1c1e/fff?text=Casa+Frida');
+  background-size: cover;
+  background-position: center top;
+  overflow: hidden;
+}
+
+#nosotros-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+#nosotros-hero .hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 var(--margin-desktop);
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* === HISTORIA === */
+#nuestra-historia {
+  background: var(--color-neutral-bg);
+  padding: var(--section-gap) var(--margin-desktop);
+}
+
+.historia__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.historia__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.historia__content h2 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-neutral-text);
+  line-height: 1.2;
+}
+
+.historia__content p {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+  line-height: 1.8;
+}
+
+.historia__imagenes {
+  position: relative;
+}
+
+.historia__img--principal {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  display: block;
+}
+
+.historia__cita {
+  position: absolute;
+  bottom: var(--space-5);
+  right: calc(-1 * var(--space-5));
+  background: var(--color-primary-light);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--border-radius-lg);
+  max-width: 220px;
+}
+
+.historia__cita p {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body-lg);
+  color: #fff;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: var(--space-1);
+}
+
+.historia__cita span {
+  font-size: var(--font-size-caption);
+  color: rgba(255,255,255,0.8);
+  font-weight: var(--font-semibold);
+}
+
+/* === COCINA === */
+#nuestra-cocina {
+  background: var(--color-neutral-surface);
+  padding: var(--section-gap) var(--margin-desktop);
+}
+
+.cocina__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.cocina__figura {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.cocina__figura img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition-default);
+}
+
+.cocina__figura:hover img {
+  transform: scale(1.03);
+}
+
+.cocina__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cocina__content h2 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-neutral-text);
+  line-height: 1.2;
+}
+
+.cocina__content p {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+  line-height: 1.8;
+}
+
+/* === ESENCIA === */
+#nuestra-esencia {
+  background: var(--color-neutral-bg);
+  padding: var(--section-gap) var(--margin-desktop);
+  text-align: center;
+}
+
+.esencia__content {
+  max-width: 800px;
+  margin: 0 auto var(--space-10);
+}
+
+.esencia__frase {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-xl);
+  font-weight: var(--font-medium);
+  color: var(--color-neutral-text);
+  line-height: 1.15;
+  margin-top: var(--space-4);
+  border: none;
+  padding: 0;
+}
+
+.esencia__valores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.valor__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.valor__numero {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  letter-spacing: 0.15em;
+}
+
+.valor__item h4 {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-label-md);
+  font-weight: var(--font-semibold);
+  color: var(--color-neutral-text);
+}
+
+.valor__item p {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+  line-height: 1.6;
+}
+
+/* === EQUIPO === */
+#nuestro-equipo {
+  background: var(--color-neutral-surface);
+  padding: var(--section-gap) var(--margin-desktop);
+}
+
+.equipo__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+.miembro__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.miembro__card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  display: block;
+  transition: var(--transition-default);
+  filter: grayscale(20%);
+}
+
+.miembro__card:hover img {
+  filter: grayscale(0%);
+  transform: translateY(-4px);
+}
+
+.miembro__card h4 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-neutral-text);
+  margin-top: var(--space-2);
+}
+
+.miembro__rol {
+  font-size: var(--font-size-label-md);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+.miembro__bio {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+  line-height: 1.6;
+}
+
+/* === GALERÍA === */
+#galeria-nosotros {
+  background: var(--color-neutral-bg);
+  padding: var(--section-gap) var(--margin-desktop);
+}
+
+.galeria-nosotros__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 260px 260px;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+.galeria-nosotros__grid figure {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.galeria-nosotros__grid figure:first-child {
+  grid-row: span 2;
+}
+
+.galeria-nosotros__grid figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition-default);
+}
+
+.galeria-nosotros__grid figure:hover img {
+  transform: scale(1.04);
+}
+
+/* === TIMELINE === */
+/* === TIMELINE === */
+#timeline {
+  background: var(--color-neutral-surface);
+  padding: var(--section-gap) var(--margin-desktop);
+}
+
+.timeline__container {
+  position: relative;
+  max-width: 700px;
+  margin: var(--space-8) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-left: 120px;
+}
+
+/* Línea vertical */
+.timeline__container::before {
+  content: '';
+  position: absolute;
+  left: 100px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--color-neutral-surface);
+  border-left: 1px solid var(--color-tertiary);
+  opacity: 0.3;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: var(--space-6);
+  align-items: start;
+  position: relative;
+  margin-left: -120px;
+}
+
+/* Punto sobre la línea */
+.timeline__item::after {
+  content: '';
+  position: absolute;
+  left: 94px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--color-tertiary);
+  z-index: 1;
+}
+
+.timeline__item--active::after {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(145, 71, 43, 0.15);
+}
+
+.timeline__anio {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-tertiary);
+  text-align: right;
+  padding-top: 2px;
+}
+
+.timeline__item--active .timeline__anio {
+  color: var(--color-primary);
+}
+
+.timeline__content {
+  padding-left: var(--space-6);
+}
+
+.timeline__content h4 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-md);
+  font-weight: var(--font-medium);
+  color: var(--color-neutral-text);
+  margin-bottom: var(--space-2);
+}
+
+.timeline__content p {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+  line-height: 1.7;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .timeline__container {
+    padding-left: 80px;
+  }
+
+  .timeline__container::before {
+    left: 60px;
+  }
+
+  .timeline__item {
+    grid-template-columns: 50px 1fr;
+    margin-left: -80px;
+  }
+
+  .timeline__item::after {
+    left: 54px;
+  }
+
+  .timeline__anio {
+    font-size: var(--font-size-body-md);
+  }
+}
+
+/* === CTA FINAL === */
+#nosotros-cta {
+  background: var(--color-primary);
+  padding: var(--section-gap) var(--margin-desktop);
+  text-align: center;
+}
+
+#nosotros-cta .cta__content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+#nosotros-cta .section__etiqueta {
+  color: var(--color-primary-light);
+}
+
+#nosotros-cta .cta__titulo {
+  color: #fff;
+}
+
+#nosotros-cta .cta__subtitulo {
+  color: rgba(255,255,255,0.8);
+}
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+  #nosotros-hero .hero__content {
+    padding: 0 var(--margin-mobile);
+  }
+
+  #nuestra-historia,
+  #nuestra-cocina,
+  #nuestra-esencia,
+  #nuestro-equipo,
+  #galeria-nosotros,
+  #timeline,
+  #nosotros-cta {
+    padding: var(--space-10) var(--margin-mobile);
+  }
+
+  .historia__layout,
+  .cocina__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .historia__cita {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    max-width: 100%;
+    margin-top: var(--space-4);
+  }
+
+  .esencia__frase {
+    font-size: var(--font-size-headline-md);
+  }
+
+  .esencia__valores {
+    grid-template-columns: 1fr;
+  }
+
+  .equipo__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galeria-nosotros__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .galeria-nosotros__grid figure:first-child {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .timeline__container::before {
+    left: 60px;
+  }
+
+  .timeline__item {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .timeline__item::before {
+    left: 54px;
+  }
+}
