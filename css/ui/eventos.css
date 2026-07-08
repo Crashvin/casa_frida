@@ -5,12 +5,10 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('../assets/eventos/hero-eventos.jpg');
+  background-image: url('https://placehold.co/1920x1080/1a1c1e/fff?text=Casa+Frida+Eventos');
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  background-color: var(--color-primary-container);
-  color:white;
 }
 
 #eventos-hero::before {
@@ -19,8 +17,8 @@
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.4) 60%,
     rgba(0, 0, 0, 0.1) 100%
   );
   z-index: 1;
@@ -31,25 +29,21 @@
   z-index: 2;
   padding: 0 var(--margin-desktop);
   max-width: 720px;
-}
-
-.hero__titulo {
-  font-family: var(--font-primary);
-  font-weight: var(--font-bold);
-  line-height: 1.1;
-  margin-bottom: var(--space-4);
-  color:white;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 
 /* === TIPOS DE EVENTO === */
 #tipos-evento {
   background: var(--color-neutral-bg);
+  padding: var(--section-gap) var(--margin-desktop);
 }
 
 .tipos__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-5);
+  gap: var(--space-4);
 }
 
 .tipo__card {
@@ -61,9 +55,10 @@
 
 .tipo__card img {
   width: 100%;
-  height: 320px;
+  height: 300px;
   object-fit: cover;
   transition: var(--transition-default);
+  display: block;
 }
 
 .tipo__card:hover img {
@@ -76,7 +71,7 @@
   left: 0;
   right: 0;
   padding: var(--space-5);
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
@@ -107,11 +102,88 @@
   border-color: var(--color-primary-light);
 }
 
-/* === CALENDARIO === */
-#disponibilidad {
-  background: var(--color-neutral-surface);
+/* === TIPOS GRID REFINADO === */
+#tipos-evento .section__header {
+  margin-bottom: var(--space-6);
+  text-align: center;
 }
 
+#tipos-evento .section__header h2 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-lg);
+  color: var(--color-neutral-text);
+  text-align: center;
+}
+
+/* Primera card más grande — ocupa 2 filas */
+.tipos__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: var(--space-3);
+}
+
+.tipo__card:first-child {
+  grid-row: span 2;
+}
+
+.tipo__card:first-child img {
+  height: 100%;
+}
+
+.tipo__card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: var(--transition-default);
+  display: block;
+}
+
+/* Separador decorativo bajo el título */
+#tipos-evento .section__header::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--color-primary);
+  margin: var(--space-3) auto 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tipos__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .tipo__card:first-child {
+    grid-row: span 1;
+  }
+
+  .tipo__card:first-child img {
+    height: 300px;
+  }
+}
+
+/* === SECCIÓN COMBINADA: CALENDARIO + FORMULARIO === */
+#disponibilidad-formulario {
+  background: var(--color-neutral-surface);
+  padding: var(--section-gap) var(--margin-desktop);
+}
+
+#disponibilidad-formulario .section__header {
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.disponibilidad__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+/* === CALENDARIO === */
 .section__subtitulo {
   font-size: var(--font-size-body-md);
   color: var(--color-tertiary);
@@ -119,18 +191,35 @@
 }
 
 .calendario__wrapper {
-  max-width: 600px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+  position: sticky;
+  top: 100px;
+}
+
+.calendario__encabezado {
+  margin-bottom: var(--space-3);
+}
+
+.calendario__encabezado h3 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-md);
+  color: var(--color-neutral-text);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--space-1);
+}
+
+.calendario__encabezado p {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
 }
 
 .calendario__container {
   background: #fff;
   border-radius: var(--border-radius-lg);
   padding: var(--space-5);
-  box-shadow: var(--shadow-ambient);
+  box-shadow: 0 4px 24px rgba(26, 28, 30, 0.08);
 }
 
 .calendario__header {
@@ -138,6 +227,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-neutral-surface);
 }
 
 .calendario__titulo {
@@ -154,11 +245,10 @@
   width: 36px;
   height: 36px;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--color-neutral-text);
   transition: var(--transition-default);
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -187,7 +277,7 @@
 .calendario__grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 4px;
+  gap: 2px;
 }
 
 .calendario__dia {
@@ -213,21 +303,23 @@
 }
 
 .calendario__dia--ocupado {
-  background: var(--color-neutral-surface);
-  color: var(--color-tertiary);
+  color: var(--color-neutral-surface);
   text-decoration: line-through;
   cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .calendario__dia--seleccionado {
   background: var(--color-primary);
   color: #fff;
   font-weight: var(--font-semibold);
+  box-shadow: 0 2px 8px rgba(145, 71, 43, 0.4);
 }
 
 .calendario__dia--pasado {
   color: var(--color-neutral-surface);
   cursor: not-allowed;
+  opacity: 0.4;
 }
 
 .calendario__dia--vacio {
@@ -238,8 +330,8 @@
 .calendario__leyenda {
   display: flex;
   gap: var(--space-4);
-  justify-content: center;
   flex-wrap: wrap;
+  padding-top: var(--space-3);
 }
 
 .leyenda__item {
@@ -252,41 +344,48 @@
 
 .leyenda__item::before {
   content: '';
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
-.leyenda__item--disponible::before { background: var(--color-secondary); }
-.leyenda__item--ocupado::before    { background: var(--color-neutral-surface); border: 1px solid var(--color-tertiary); }
+.leyenda__item--disponible::before  { background: var(--color-neutral-text); }
+.leyenda__item--ocupado::before     { background: var(--color-neutral-surface); border: 1px solid var(--color-tertiary); }
 .leyenda__item--seleccionado::before { background: var(--color-primary); }
 
 /* === FORMULARIO === */
-#formulario-evento {
-  background: var(--color-neutral-bg);
+.formulario__encabezado {
+  margin-bottom: var(--space-5);
 }
 
-.formulario__wrapper {
-  max-width: 780px;
-  margin: 0 auto;
+.formulario__encabezado h3 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-md);
+  color: var(--color-neutral-text);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--space-1);
+}
+
+.formulario__encabezado p {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
 }
 
 .formulario__evento {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
-}
-
-.formulario__grupo {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-4);
+  background: #fff;
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-6);
+  box-shadow: 0 4px 24px rgba(26, 28, 30, 0.08);
 }
 
 .formulario__grupo--doble {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .formulario__campo {
@@ -296,18 +395,18 @@
 }
 
 .formulario__campo label {
-  font-size: var(--font-size-label-md);
+  font-size: var(--font-size-caption);
   font-weight: var(--font-semibold);
   color: var(--color-neutral-text);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .formulario__campo input,
 .formulario__campo select,
 .formulario__campo textarea {
-  padding: var(--space-3) var(--space-3);
-  background: var(--color-neutral-surface);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-neutral-bg);
   border: 1px solid transparent;
   border-radius: var(--border-radius-md);
   font-family: var(--font-secondary);
@@ -315,6 +414,7 @@
   color: var(--color-neutral-text);
   transition: var(--transition-default);
   outline: none;
+  width: 100%;
 }
 
 .formulario__campo input:focus,
@@ -322,23 +422,30 @@
 .formulario__campo textarea:focus {
   border-color: var(--color-primary);
   background: #fff;
+  box-shadow: 0 0 0 3px rgba(145, 71, 43, 0.1);
 }
 
 .formulario__campo textarea {
   resize: vertical;
-  min-height: 140px;
+  min-height: 120px;
 }
 
 .formulario__submit {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: var(--space-2);
+}
+
+.formulario__submit .btn--primary {
+  width: 100%;
+  justify-content: center;
+  padding: var(--space-3);
 }
 
 .formulario__nota {
   font-size: var(--font-size-caption);
   color: var(--color-tertiary);
+  text-align: center;
 }
 
 .formulario__mensaje {
@@ -362,15 +469,30 @@
   border: 1px solid #f5c6cb;
 }
 
+.disponibilidad__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#disponibilidad-formulario {
+  background: var(--color-neutral-surface);
+  padding: var(--section-gap) var(--margin-desktop);
+}
+
 /* === GALERÍA === */
 #galeria-eventos {
-  background: var(--color-neutral-surface);
+  background: var(--color-neutral-bg);
+  padding: var(--section-gap) var(--margin-desktop);
 }
 
 .galeria__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-rows: 280px 280px;
   gap: var(--space-3);
 }
 
@@ -390,11 +512,6 @@
   height: 100%;
   object-fit: cover;
   transition: var(--transition-default);
-  min-height: 240px;
-}
-
-.galeria__figura--large img {
-  min-height: 480px;
 }
 
 .galeria__figura:hover img {
@@ -406,15 +523,152 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: var(--space-3);
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  padding: var(--space-3) var(--space-4);
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
   color: #fff;
   font-size: var(--font-size-caption);
   font-style: italic;
+  opacity: 0;
+  transition: var(--transition-default);
+}
+
+.galeria__figura:hover figcaption {
+  opacity: 1;
+}
+
+/* === SERVICIOS === */
+#servicios-evento {
+  background: var(--color-neutral-bg);
+  padding: var(--section-gap) var(--margin-desktop);
+}
+
+.servicios__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.servicios__titulo {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-neutral-text);
+  line-height: 1.2;
+  margin-bottom: var(--space-3);
+}
+
+.servicios__subtitulo {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+.servicios__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.servicio__item {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.servicio__icono {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.servicio__item h4 {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-label-md);
+  font-weight: var(--font-semibold);
+  color: var(--color-neutral-text);
+  margin-bottom: var(--space-1);
+}
+
+.servicio__item p {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+  line-height: 1.5;
+}
+
+/* Imagen con testimonio superpuesto */
+.servicios__imagen-wrapper {
+  position: relative;
+}
+
+.servicios__imagen {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  display: block;
+}
+
+.servicios__testimonio {
+  position: absolute;
+  bottom: var(--space-6);
+  left: calc(-1 * var(--space-6));
+  background: #fff;
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-4) var(--space-5);
+  max-width: 280px;
+  box-shadow: 0 8px 32px rgba(26, 28, 30, 0.12);
+}
+
+.testimonio__porcentaje {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-lg);
+  color: var(--color-primary);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-2);
+}
+
+.testimonio__texto {
+  font-size: var(--font-size-body-md);
+  color: var(--color-neutral-text);
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: var(--space-2);
+}
+
+.testimonio__autor {
+  font-size: var(--font-size-label-md);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #servicios-evento {
+    padding: var(--space-10) var(--margin-mobile);
+  }
+
+  .servicios__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .servicios__testimonio {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    max-width: 100%;
+    margin-top: var(--space-4);
+  }
 }
 
 /* === MOBILE === */
 @media (max-width: 768px) {
+  #tipos-evento,
+  #disponibilidad-formulario,
+  #galeria-eventos {
+    padding: var(--space-10) var(--margin-mobile);
+  }
+
   #eventos-hero .hero__content {
     padding: 0 var(--margin-mobile);
   }
@@ -423,16 +677,30 @@
     grid-template-columns: 1fr;
   }
 
+  .disponibilidad__layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .calendario__wrapper {
+    position: static;
+  }
+
   .formulario__grupo--doble {
     grid-template-columns: 1fr;
   }
 
   .galeria__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
   }
 
   .galeria__figura--large {
-    grid-column: span 1;
+    grid-column: span 2;
     grid-row: span 1;
+  }
+
+  .galeria__figura figcaption {
+    opacity: 1;
   }
 }

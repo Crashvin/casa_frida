@@ -165,3 +165,7 @@
 .navbar__redes {
   display: none;
 }
+
+.navbar__cerrar {
+  display: none;
+}

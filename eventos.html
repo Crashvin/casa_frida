@@ -79,99 +79,151 @@
       </div>
     </section>
 
-    <!-- CALENDARIO DE DISPONIBILIDAD -->
-    <section id="disponibilidad">
-      <header class="section__header">
-        <p class="section__etiqueta">Agenda tu fecha</p>
-        <h2>Disponibilidad</h2>
-        <p class="section__subtitulo">Consulta las fechas disponibles y elige la ideal para tu evento.</p>
-      </header>
-      <div class="calendario__wrapper">
-        <div class="calendario__container" id="calendario">
-          <!-- Generado por calendario.js -->
+    <!-- SECCIÓN SERVICIOS -->
+<section id="servicios-evento">
+  <div class="servicios__layout">
+
+    <!-- Columna izquierda: texto + features -->
+    <div class="servicios__content">
+      <h2 class="servicios__titulo">Ejecución Impecable, Cada Detalle Importa.</h2>
+      <p class="servicios__subtitulo">Nuestro equipo de eventos trabaja contigo para garantizar que cada detalle logístico sea tan memorable como la experiencia.</p>
+
+      <div class="servicios__grid">
+        <div class="servicio__item">
+          <span class="servicio__icono">🍽️</span>
+          <div>
+            <h4>Catering Personalizado</h4>
+            <p>Menús diseñados por nuestro chef ejecutivo para complementar tu evento.</p>
+          </div>
         </div>
-        <div class="calendario__leyenda">
-          <span class="leyenda__item leyenda__item--disponible">Disponible</span>
-          <span class="leyenda__item leyenda__item--ocupado">Ocupado</span>
-          <span class="leyenda__item leyenda__item--seleccionado">Seleccionado</span>
+        <div class="servicio__item">
+          <span class="servicio__icono">📋</span>
+          <div>
+            <h4>Coordinación</h4>
+            <p>Coordinadores en sitio para manejar cada detalle mientras tú celebras.</p>
+          </div>
+        </div>
+        <div class="servicio__item">
+          <span class="servicio__icono">🎵</span>
+          <div>
+            <h4>Audiovisual</h4>
+            <p>Sonido e iluminación profesional integrados en todos nuestros espacios.</p>
+          </div>
+        </div>
+        <div class="servicio__item">
+          <span class="servicio__icono">🚗</span>
+          <div>
+            <h4>Estacionamiento</h4>
+            <p>Valet parking y estacionamiento seguro para todos tus invitados.</p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- FORMULARIO DE EVENTO -->
-    <section id="formulario-evento">
-      <header class="section__header">
-        <p class="section__etiqueta">Cuéntanos tu visión</p>
-        <h2>Agenda tu Evento</h2>
-        <p class="section__subtitulo">Completa el formulario y te contactaremos en menos de 24 horas.</p>
-      </header>
+    <!-- Columna derecha: imagen con testimonio -->
+    <div class="servicios__imagen-wrapper">
+      <img src="https://placehold.co/600x700/655a49/fff?text=Casa+Frida" alt="Detalle de evento Casa Frida" loading="lazy" class="servicios__imagen">
+      <div class="servicios__testimonio">
+        <p class="testimonio__porcentaje">100%</p>
+        <p class="testimonio__texto">"La atención al detalle superó todas nuestras expectativas. Casa Frida se sintió como nuestro santuario privado."</p>
+        <span class="testimonio__autor">— Los García</span>
+      </div>
+    </div>
 
-      <div class="formulario__wrapper">
-        <form class="formulario__evento" id="formEvento">
+  </div>
+</section>
 
-          <div class="formulario__grupo formulario__grupo--doble">
-            <div class="formulario__campo">
-              <label for="nombre">Nombre completo *</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-            </div>
-            <div class="formulario__campo">
-              <label for="email">Correo electrónico *</label>
-              <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
-            </div>
+    <!-- CALENDARIO DE DISPONIBILIDAD -->
+    <section id="disponibilidad-formulario">
+  <header class="section__header">
+    <p class="section__etiqueta">Agenda tu fecha</p>
+    <h2>Disponibilidad & Contacto</h2>
+    <p class="section__subtitulo">Selecciona una fecha disponible y cuéntanos sobre tu evento.</p>
+  </header>
+
+  <div class="disponibilidad__layout">
+
+    <!-- COLUMNA IZQUIERDA: Calendario -->
+    <div class="calendario__wrapper">
+      <div class="calendario__encabezado">
+        <h3>Fechas Disponibles</h3>
+        <p>Las fechas marcadas ya están reservadas.</p>
+      </div>
+      <div class="calendario__container" id="calendario"></div>
+      <div class="calendario__leyenda">
+        <span class="leyenda__item leyenda__item--disponible">Disponible</span>
+        <span class="leyenda__item leyenda__item--ocupado">Ocupado</span>
+        <span class="leyenda__item leyenda__item--seleccionado">Seleccionado</span>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA: Formulario -->
+    <div>
+      <div class="formulario__encabezado">
+        <h3>Cuéntanos tu Visión</h3>
+        <p>Te contactaremos en menos de 24 horas.</p>
+      </div>
+      <form class="formulario__evento" id="formEvento">
+        <div class="formulario__grupo--doble">
+          <div class="formulario__campo">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
           </div>
-
-          <div class="formulario__grupo formulario__grupo--doble">
-            <div class="formulario__campo">
-              <label for="tipo_evento">Tipo de evento *</label>
-              <select id="tipo_evento" name="tipo_evento" required>
-                <option value="" disabled selected>Selecciona una opción</option>
-                <option value="Boda">Boda</option>
-                <option value="Evento Corporativo">Evento Corporativo</option>
-                <option value="XV Años">XV Años</option>
-                <option value="Aniversario">Aniversario</option>
-                <option value="Graduación">Graduación</option>
-                <option value="Cena Íntima">Cena Íntima</option>
-                <option value="Otro">Otro</option>
-              </select>
-            </div>
-            <div class="formulario__campo">
-              <label for="fecha_evento">Fecha deseada *</label>
-              <input type="date" id="fecha_evento" name="fecha_evento" required>
-            </div>
+          <div class="formulario__campo">
+            <label for="email">Correo *</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
           </div>
-
-          <div class="formulario__grupo formulario__grupo--doble">
-            <div class="formulario__campo">
-              <label for="num_invitados">Número de invitados *</label>
-              <input type="number" id="num_invitados" name="num_invitados" placeholder="Ej. 80" min="1" max="300" required>
-            </div>
-            <div class="formulario__campo">
-              <label for="presupuesto">Presupuesto estimado</label>
-              <select id="presupuesto" name="presupuesto">
-                <option value="" disabled selected>Selecciona un rango</option>
-                <option value="Menos de $20,000">Menos de $20,000</option>
-                <option value="$20,000 - $50,000">$20,000 - $50,000</option>
-                <option value="$50,000 - $100,000">$50,000 - $100,000</option>
-                <option value="$100,000 - $200,000">$100,000 - $200,000</option>
-                <option value="Más de $200,000">Más de $200,000</option>
-              </select>
-            </div>
+        </div>
+        <div class="formulario__grupo--doble">
+          <div class="formulario__campo">
+            <label for="tipo_evento">Tipo de evento *</label>
+            <select id="tipo_evento" name="tipo_evento" required>
+              <option value="" disabled selected>Selecciona</option>
+              <option value="Boda">Boda</option>
+              <option value="Evento Corporativo">Evento Corporativo</option>
+              <option value="XV Años">XV Años</option>
+              <option value="Aniversario">Aniversario</option>
+              <option value="Graduación">Graduación</option>
+              <option value="Cena Íntima">Cena Íntima</option>
+              <option value="Otro">Otro</option>
+            </select>
           </div>
-
-          <div class="formulario__grupo">
-            <div class="formulario__campo">
-              <label for="message">Cuéntanos más sobre tu evento</label>
-              <textarea id="message" name="message" rows="5" placeholder="Describe tu visión, requerimientos especiales, decoración, etc."></textarea>
-            </div>
+          <div class="formulario__campo">
+            <label for="fecha_evento">Fecha deseada *</label>
+            <input type="date" id="fecha_evento" name="fecha_evento" required>
           </div>
-
-          <div class="formulario__submit">
-            <button type="submit" class="btn btn--primary" id="btnEnviar">
-              Enviar solicitud
-            </button>
-            <p class="formulario__nota">* Campos requeridos. Te responderemos en menos de 24 horas.</p>
+        </div>
+        <div class="formulario__grupo--doble">
+          <div class="formulario__campo">
+            <label for="num_invitados">Invitados *</label>
+            <input type="number" id="num_invitados" name="num_invitados" placeholder="Ej. 80" min="1" max="300" required>
           </div>
+          <div class="formulario__campo">
+            <label for="presupuesto">Presupuesto</label>
+            <select id="presupuesto" name="presupuesto">
+              <option value="" disabled selected>Selecciona</option>
+              <option value="Menos de $20,000">Menos de $20,000</option>
+              <option value="$20,000 - $50,000">$20,000 - $50,000</option>
+              <option value="$50,000 - $100,000">$50,000 - $100,000</option>
+              <option value="$100,000 - $200,000">$100,000 - $200,000</option>
+              <option value="Más de $200,000">Más de $200,000</option>
+            </select>
+          </div>
+        </div>
+        <div class="formulario__campo">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="4" placeholder="Cuéntanos sobre tu evento..."></textarea>
+        </div>
+        <div class="formulario__submit">
+          <button type="submit" class="btn btn--primary" id="btnEnviar">Enviar solicitud</button>
+          <p class="formulario__nota">* Campos requeridos. Respuesta en menos de 24 horas.</p>
+        </div>
+        <div class="formulario__mensaje" id="formularioMensaje"></div>
+      </form>
+    </div>
 
+  </div>
+</section>
           <!-- Mensaje de éxito/error -->
           <div class="formulario__mensaje" id="formularioMensaje"></div>
 
