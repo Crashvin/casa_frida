@@ -1,35 +1,219 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Casa Frida, restaurante y salón de eventos en Tepotzotlán, Estado de México. Gastronomía Mar & Tierra, espacios únicos para bodas, celebraciones y eventos corporativos.">
-    <meta name="author" content="Casa Frida">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Celebra tus eventos más importantes en Casa Frida. Bodas, eventos corporativos, cenas íntimas y celebraciones sociales en Tepotzotlán, Estado de México.">
+  <meta name="author" content="Casa Frida">
+  <title>Eventos — Casa Frida</title>
 
-    <title>Eventos — Casa Frida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="css/base/reset.css">
-        <link rel="stylesheet" href="css/base/variables.css">
-        <link rel="stylesheet" href="css/base/typography.css">
-        <link rel="stylesheet" href="css/layout/main.css">
-        <link rel="stylesheet" href="css/ui/navbar.css">
-        <link rel="stylesheet" href="css/ui/footer.css">
-        <link rel="stylesheet" href="css/ui/buttons.css">
-        <link rel="stylesheet" href="css/ui/hero.css">
-        <link rel="stylesheet" href="css/ui/sections.css">
-
+  <link rel="stylesheet" href="css/base/reset.css">
+  <link rel="stylesheet" href="css/base/variables.css">
+  <link rel="stylesheet" href="css/base/typography.css">
+  <link rel="stylesheet" href="css/layout/main.css">
+  <link rel="stylesheet" href="css/ui/navbar.css">
+  <link rel="stylesheet" href="css/ui/footer.css">
+  <link rel="stylesheet" href="css/ui/buttons.css">
+  <link rel="stylesheet" href="css/ui/eventos.css">
 </head>
 <body>
-    
-    <main>
 
-    </main>
+  <main>
 
-    <script type="module" src="js/components/navbar.js"></script>
-    <script type="module" src="js/components/footer.js"></script>
+    <!-- HERO -->
+    <section id="eventos-hero">
+      <div class="hero__content">
+        <p class="hero__etiqueta">Celebraciones en Casa Frida</p>
+        <h1 class="hero__titulo">Momentos Memorables, Bellamente Celebrados.</h1>
+        <p class="hero__subtitulo">Desde bodas íntimas hasta grandes celebraciones corporativas, creamos experiencias únicas e irrepetibles.</p>
+        <div class="hero__botones">
+          <a href="#formulario-evento" class="btn btn--primary">Agendar mi evento</a>
+          <a href="#tipos-evento" class="btn btn--secondary">Ver espacios</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPOS DE EVENTO -->
+    <section id="tipos-evento">
+      <header class="section__header">
+        <p class="section__etiqueta">Experiencias Curadas</p>
+        <h2>¿Qué quieres celebrar?</h2>
+      </header>
+      <div class="tipos__grid">
+        <article class="tipo__card">
+          <img src="https://placehold.co/600x400/91472b/fff?text=Bodas" alt="Bodas en Casa Frida" loading="lazy">
+          <div class="tipo__info">
+            <h3>Bodas</h3>
+            <p>Hasta 150 invitados. El escenario perfecto para el día más especial de tu vida.</p>
+            <a href="#formulario-evento" class="btn btn--ghost">Cotizar boda</a>
+          </div>
+        </article>
+        <article class="tipo__card">
+          <img src="https://placehold.co/600x400/5c614d/fff?text=Corporativos" alt="Eventos corporativos" loading="lazy">
+          <div class="tipo__info">
+            <h3>Corporativos</h3>
+            <p>Reuniones, presentaciones y celebraciones empresariales con clase y distinción.</p>
+            <a href="#formulario-evento" class="btn btn--ghost">Cotizar evento</a>
+          </div>
+        </article>
+        <article class="tipo__card">
+          <img src="https://placehold.co/600x400/655a49/fff?text=Sociales" alt="Eventos sociales" loading="lazy">
+          <div class="tipo__info">
+            <h3>Sociales</h3>
+            <p>XV años, aniversarios, graduaciones. Cada milestone merece ser celebrado.</p>
+            <a href="#formulario-evento" class="btn btn--ghost">Cotizar celebración</a>
+          </div>
+        </article>
+        <article class="tipo__card">
+          <img src="https://placehold.co/600x400/91472b/fff?text=Cenas+Intimas" alt="Cenas íntimas" loading="lazy">
+          <div class="tipo__info">
+            <h3>Cenas Íntimas</h3>
+            <p>Espacios privados para hasta 20 personas. Momentos exclusivos y personalizados.</p>
+            <a href="#formulario-evento" class="btn btn--ghost">Cotizar cena</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CALENDARIO DE DISPONIBILIDAD -->
+    <section id="disponibilidad">
+      <header class="section__header">
+        <p class="section__etiqueta">Agenda tu fecha</p>
+        <h2>Disponibilidad</h2>
+        <p class="section__subtitulo">Consulta las fechas disponibles y elige la ideal para tu evento.</p>
+      </header>
+      <div class="calendario__wrapper">
+        <div class="calendario__container" id="calendario">
+          <!-- Generado por calendario.js -->
+        </div>
+        <div class="calendario__leyenda">
+          <span class="leyenda__item leyenda__item--disponible">Disponible</span>
+          <span class="leyenda__item leyenda__item--ocupado">Ocupado</span>
+          <span class="leyenda__item leyenda__item--seleccionado">Seleccionado</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULARIO DE EVENTO -->
+    <section id="formulario-evento">
+      <header class="section__header">
+        <p class="section__etiqueta">Cuéntanos tu visión</p>
+        <h2>Agenda tu Evento</h2>
+        <p class="section__subtitulo">Completa el formulario y te contactaremos en menos de 24 horas.</p>
+      </header>
+
+      <div class="formulario__wrapper">
+        <form class="formulario__evento" id="formEvento">
+
+          <div class="formulario__grupo formulario__grupo--doble">
+            <div class="formulario__campo">
+              <label for="nombre">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="formulario__campo">
+              <label for="email">Correo electrónico *</label>
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+            </div>
+          </div>
+
+          <div class="formulario__grupo formulario__grupo--doble">
+            <div class="formulario__campo">
+              <label for="tipo_evento">Tipo de evento *</label>
+              <select id="tipo_evento" name="tipo_evento" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="Boda">Boda</option>
+                <option value="Evento Corporativo">Evento Corporativo</option>
+                <option value="XV Años">XV Años</option>
+                <option value="Aniversario">Aniversario</option>
+                <option value="Graduación">Graduación</option>
+                <option value="Cena Íntima">Cena Íntima</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="formulario__campo">
+              <label for="fecha_evento">Fecha deseada *</label>
+              <input type="date" id="fecha_evento" name="fecha_evento" required>
+            </div>
+          </div>
+
+          <div class="formulario__grupo formulario__grupo--doble">
+            <div class="formulario__campo">
+              <label for="num_invitados">Número de invitados *</label>
+              <input type="number" id="num_invitados" name="num_invitados" placeholder="Ej. 80" min="1" max="300" required>
+            </div>
+            <div class="formulario__campo">
+              <label for="presupuesto">Presupuesto estimado</label>
+              <select id="presupuesto" name="presupuesto">
+                <option value="" disabled selected>Selecciona un rango</option>
+                <option value="Menos de $20,000">Menos de $20,000</option>
+                <option value="$20,000 - $50,000">$20,000 - $50,000</option>
+                <option value="$50,000 - $100,000">$50,000 - $100,000</option>
+                <option value="$100,000 - $200,000">$100,000 - $200,000</option>
+                <option value="Más de $200,000">Más de $200,000</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="formulario__grupo">
+            <div class="formulario__campo">
+              <label for="message">Cuéntanos más sobre tu evento</label>
+              <textarea id="message" name="message" rows="5" placeholder="Describe tu visión, requerimientos especiales, decoración, etc."></textarea>
+            </div>
+          </div>
+
+          <div class="formulario__submit">
+            <button type="submit" class="btn btn--primary" id="btnEnviar">
+              Enviar solicitud
+            </button>
+            <p class="formulario__nota">* Campos requeridos. Te responderemos en menos de 24 horas.</p>
+          </div>
+
+          <!-- Mensaje de éxito/error -->
+          <div class="formulario__mensaje" id="formularioMensaje"></div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- GALERÍA DE EVENTOS PASADOS -->
+    <section id="galeria-eventos">
+      <header class="section__header">
+        <p class="section__etiqueta">Momentos Capturados</p>
+        <h2>Celebraciones Pasadas</h2>
+      </header>
+      <div class="galeria__grid">
+        <figure class="galeria__figura galeria__figura--large">
+          <img src="https://placehold.co/800x600/91472b/fff?text=Boda+2025" alt="Boda en Casa Frida 2025" loading="lazy">
+          <figcaption>Boda García & López — Marzo 2025</figcaption>
+        </figure>
+        <figure class="galeria__figura">
+          <img src="https://placehold.co/400x400/5c614d/fff?text=Evento+Corp" alt="Evento corporativo" loading="lazy">
+          <figcaption>Evento Corporativo — Febrero 2025</figcaption>
+        </figure>
+        <figure class="galeria__figura">
+          <img src="https://placehold.co/400x400/655a49/fff?text=XV+Anos" alt="XV Años" loading="lazy">
+          <figcaption>XV Años Sofía — Enero 2025</figcaption>
+        </figure>
+        <figure class="galeria__figura">
+          <img src="https://placehold.co/400x400/91472b/fff?text=Cena+Intima" alt="Cena íntima" loading="lazy">
+          <figcaption>Cena Íntima — Diciembre 2024</figcaption>
+        </figure>
+        <figure class="galeria__figura">
+          <img src="https://placehold.co/400x400/5c614d/fff?text=Aniversario" alt="Aniversario" loading="lazy">
+          <figcaption>Aniversario — Noviembre 2024</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/components/navbar.js"></script>
+  <script type="module" src="js/components/footer.js"></script>
+  <script type="module" src="js/components/calendario.js"></script>
+  <script type="module" src="js/eventos.js"></script>
 </body>
 </html>
