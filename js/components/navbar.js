@@ -58,6 +58,33 @@ function crearNavbar() {
   nav.appendChild(btnReservar);
   nav.appendChild(btnHamburguesa);
 
+  // Redes sociales — solo visibles en mobile
+  const redesSociales = document.createElement('div');
+  redesSociales.classList.add('navbar__redes');
+
+  const redes = [
+    { texto: 'Instagram', href: 'https://instagram.com/casafrida' },
+    { texto: 'Facebook', href: 'https://facebook.com/casafrida' },
+  ];
+
+  redes.forEach(red => {
+    const a = document.createElement('a');
+    a.setAttribute('href', red.href);
+    a.setAttribute('target', '_blank');
+    a.textContent = red.texto;
+    a.classList.add('navbar__red');
+    redesSociales.appendChild(a);
+  });
+
+  ul.appendChild(redesSociales);
+
+  // Botón cerrar menú mobile
+  const btnCerrar = document.createElement('button');
+  btnCerrar.classList.add('navbar__cerrar');
+  btnCerrar.setAttribute('aria-label', 'Cerrar menú');
+  btnCerrar.textContent = '✕';
+  ul.prepend(btnCerrar);
+
   document.body.prepend(nav);
 }
 
@@ -91,16 +118,20 @@ function detectarScroll() {
 }
 
 function toggleMenuMobile() {
-  const btn  = document.getElementById('btnHamburguesa');
+  const btn = document.getElementById('btnHamburguesa');
   const menu = document.getElementById('navLinks');
+  const btnCerrar = document.querySelector('.navbar__cerrar');
 
   btn.addEventListener('click', () => {
-
     menu.classList.toggle('navbar__links--open');
     btn.classList.toggle('navbar__hamburger--active');
+    btn.setAttribute('aria-expanded', menu.classList.contains('navbar__links--open'));
+  });
 
-    const estaAbierto = menu.classList.contains('navbar__links--open');
-    btn.setAttribute('aria-expanded', estaAbierto);
+  btnCerrar.addEventListener('click', () => {
+    menu.classList.remove('navbar__links--open');
+    btn.classList.remove('navbar__hamburger--active');
+    btn.setAttribute('aria-expanded', false);
   });
 }
 
