@@ -1,35 +1,290 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Casa Frida, restaurante y salón de eventos en Tepotzotlán, Estado de México. Gastronomía Mar & Tierra, espacios únicos para bodas, celebraciones y eventos corporativos.">
-    <meta name="author" content="Casa Frida">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctanos para reservar una mesa o agendar tu evento en Casa Frida, Tepotzotlán, Estado de México.">
+  <meta name="author" content="Casa Frida">
+  <title>Contacto — Casa Frida</title>
 
-    <title>Contacto — Casa Frida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="css/base/reset.css">
-        <link rel="stylesheet" href="css/base/variables.css">
-        <link rel="stylesheet" href="css/base/typography.css">
-        <link rel="stylesheet" href="css/layout/main.css">
-        <link rel="stylesheet" href="css/ui/navbar.css">
-        <link rel="stylesheet" href="css/ui/footer.css">
-        <link rel="stylesheet" href="css/ui/buttons.css">
-        <link rel="stylesheet" href="css/ui/hero.css">
-        <link rel="stylesheet" href="css/ui/sections.css">
-
+  <link rel="stylesheet" href="css/base/reset.css">
+  <link rel="stylesheet" href="css/base/variables.css">
+  <link rel="stylesheet" href="css/base/typography.css">
+  <link rel="stylesheet" href="css/layout/main.css">
+  <link rel="stylesheet" href="css/ui/navbar.css">
+  <link rel="stylesheet" href="css/ui/footer.css">
+  <link rel="stylesheet" href="css/ui/buttons.css">
+  <link rel="stylesheet" href="css/ui/contacto.css">
 </head>
 <body>
+
+  <main>
+
+    <!-- HEADER CONTACTO -->
+    <section id="contacto-header">
+      <div class="contacto-header__layout">
+        <div class="contacto-header__content">
+          <p class="section__etiqueta">Estamos para ti</p>
+          <h1>Contáctanos</h1>
+          <p class="contacto-header__subtitulo">Ya sea para reservar una mesa tranquila o planear la celebración de tu vida, nuestro equipo está aquí para hacer que suceda.</p>
+        </div>
+        <figure class="contacto-header__figura">
+          <img src="https://placehold.co/600x500/91472b/fff?text=Casa+Frida" alt="Casa Frida Tepotzotlán" loading="lazy">
+          <figcaption>"Bienvenido a casa."</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN Y HORARIOS -->
+    <section id="ubicacion">
+      <div class="ubicacion__layout">
+
+        <!-- Mapa -->
+        <div class="ubicacion__mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.0840095345827!2d-99.28947990739519!3d19.698312500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d219c008a92e27%3A0x1ad8f7c8a2db543b!2sCasa%20Frida%20Tepotzotl%C3%A1n!5e0!3m2!1ses-419!2smx!4v1783491463028!5m2!1ses-419!2smx"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Ubicación Casa Frida Tepotzotlán">
+          </iframe>
+        </div>
+
+        <!-- Info -->
+        <div class="ubicacion__info">
+          <div class="ubicacion__bloque">
+            <h3>Nuestro Santuario</h3>
+            <p>📍 Carretera de las Cañadas, Andrés Molina Enríquez #3</p>
+            <p>Tepotzotlán, Estado de México, 54600</p>
+            <a href="https://maps.google.com/?q=Casa+Frida+Tepotzotlan" target="_blank" class="btn btn--ghost" style="margin-top: 1rem; display: inline-flex;">Ver en Google Maps →</a>
+          </div>
+
+          <div class="ubicacion__bloque ubicacion__bloque--dark">
+            <h3>Horarios</h3>
+            <div class="horarios__grid">
+              <span>Lun – Jue</span><span>13:00 – 22:00</span>
+              <span>Vie – Sáb</span><span>13:00 – 23:00</span>
+              <span>Domingo</span><span>13:00 – 20:00</span>
+            </div>
+            <p class="horarios__nota">* Cocina cierra una hora antes del cierre.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACTO DIRECTO -->
+    <section id="contacto-directo">
+      <header class="section__header">
+        <p class="section__etiqueta">Conéctate con nosotros</p>
+        <h2>Contáctanos Directamente</h2>
+      </header>
+      <div class="contacto-directo__grid">
+        <a href="tel:+527141234567" class="contacto__canal">
+          <span class="canal__icono">📞</span>
+          <span class="canal__label">Teléfono</span>
+          <span class="canal__valor">+52 714 123 4567</span>
+        </a>
+        <a href="https://wa.me/527141234567" target="_blank" class="contacto__canal">
+          <span class="canal__icono">💬</span>
+          <span class="canal__label">WhatsApp</span>
+          <span class="canal__valor">Conserje en línea</span>
+        </a>
+        <a href="mailto:casafridaeventostepotzotlan@gmail.com" class="contacto__canal">
+          <span class="canal__icono">✉️</span>
+          <span class="canal__label">Email</span>
+          <span class="canal__valor">casafridaeventostepotzotlan@gmail.com</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- FORMULARIOS LADO A LADO -->
+    <section id="formularios">
+      <div class="formularios__layout">
+
+        <!-- Reservar mesa -->
+        <div class="formulario__wrapper">
+          <div class="formulario__encabezado">
+            <h3>Reservar una Mesa</h3>
+            <p>Cenas íntimas y experiencias gastronómicas. Reserva con al menos 24 horas de anticipación.</p>
+          </div>
+          <form class="formulario__evento" id="formReserva">
+            <div class="formulario__grupo--doble">
+              <div class="formulario__campo">
+                <label for="nombre-reserva">Nombre *</label>
+                <input type="text" id="nombre-reserva" name="nombre" placeholder="Tu nombre" required>
+              </div>
+              <div class="formulario__campo">
+                <label for="email-reserva">Correo *</label>
+                <input type="email" id="email-reserva" name="email" placeholder="tu@correo.com" required>
+              </div>
+            </div>
+            <div class="formulario__campo">
+              <label for="telefono">Teléfono *</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+52 55 0000 0000" required>
+            </div>
+            <div class="formulario__grupo--doble">
+              <div class="formulario__campo">
+                <label for="fecha-reserva">Fecha *</label>
+                <input type="date" id="fecha-reserva" name="fecha_reserva" required>
+              </div>
+              <div class="formulario__campo">
+                <label for="hora-reserva">Hora *</label>
+                <select id="hora-reserva" name="hora_reserva" required>
+                  <option value="" disabled selected>Selecciona</option>
+                  <option value="13:00">13:00</option>
+                  <option value="13:30">13:30</option>
+                  <option value="14:00">14:00</option>
+                  <option value="14:30">14:30</option>
+                  <option value="15:00">15:00</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulario__campo">
+              <label for="num-personas">Número de personas *</label>
+              <input type="number" id="num-personas" name="num_personas" placeholder="Ej. 4" min="1" max="20" required>
+            </div>
+            <div class="formulario__campo">
+              <label for="message-reserva">Comentarios adicionales</label>
+              <textarea id="message-reserva" name="message" rows="3" placeholder="Alergias, ocasión especial, preferencias..."></textarea>
+            </div>
+            <div class="formulario__submit">
+              <button type="submit" class="btn btn--primary" id="btnReserva">Confirmar disponibilidad</button>
+              <p class="formulario__nota">* Recibirás confirmación en menos de 2 horas.</p>
+            </div>
+            <div class="formulario__mensaje" id="mensajeReserva"></div>
+          </form>
+        </div>
+
+        <!-- Evento -->
+        <div class="formulario__wrapper">
+          <div class="formulario__encabezado">
+            <h3>Planear un Evento</h3>
+            <p>Para bodas, corporativos y celebraciones sociales. Te contactaremos en menos de 24 horas.</p>
+          </div>
+          <form class="formulario__evento" id="formEvento">
+            <div class="formulario__grupo--doble">
+              <div class="formulario__campo">
+                <label for="nombre-evento">Nombre *</label>
+                <input type="text" id="nombre-evento" name="nombre" placeholder="Tu nombre" required>
+              </div>
+              <div class="formulario__campo">
+                <label for="email-evento">Correo *</label>
+                <input type="email" id="email-evento" name="email" placeholder="tu@correo.com" required>
+              </div>
+            </div>
+            <div class="formulario__grupo--doble">
+              <div class="formulario__campo">
+                <label for="tipo-evento">Tipo de evento *</label>
+                <select id="tipo-evento" name="tipo_evento" required>
+                  <option value="" disabled selected>Selecciona</option>
+                  <option value="Boda">Boda</option>
+                  <option value="Evento Corporativo">Evento Corporativo</option>
+                  <option value="XV Años">XV Años</option>
+                  <option value="Aniversario">Aniversario</option>
+                  <option value="Graduación">Graduación</option>
+                  <option value="Cena Íntima">Cena Íntima</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+              <div class="formulario__campo">
+                <label for="fecha-evento">Fecha deseada *</label>
+                <input type="date" id="fecha-evento" name="fecha_evento" required>
+              </div>
+            </div>
+            <div class="formulario__grupo--doble">
+              <div class="formulario__campo">
+                <label for="invitados">Invitados *</label>
+                <input type="number" id="invitados" name="num_invitados" placeholder="Ej. 80" min="1" max="300" required>
+              </div>
+              <div class="formulario__campo">
+                <label for="presupuesto">Presupuesto</label>
+                <select id="presupuesto" name="presupuesto">
+                  <option value="" disabled selected>Selecciona</option>
+                  <option value="Menos de $20,000">Menos de $20,000</option>
+                  <option value="$20,000 - $50,000">$20,000 - $50,000</option>
+                  <option value="$50,000 - $100,000">$50,000 - $100,000</option>
+                  <option value="$100,000 - $200,000">$100,000 - $200,000</option>
+                  <option value="Más de $200,000">Más de $200,000</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulario__campo">
+              <label for="message-evento">Cuéntanos más</label>
+              <textarea id="message-evento" name="message" rows="3" placeholder="Describe tu visión, requerimientos especiales..."></textarea>
+            </div>
+            <div class="formulario__submit">
+              <button type="submit" class="btn btn--primary" id="btnEvento">Enviar solicitud</button>
+              <p class="formulario__nota">* Te contactaremos en menos de 24 horas.</p>
+            </div>
+            <div class="formulario__mensaje" id="mensajeEvento"></div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <header class="section__header">
+        <p class="section__etiqueta">Preguntas frecuentes</p>
+        <h2>Preguntas Frecuentes</h2>
+      </header>
+      <div class="faq__container">
+        <details class="faq__item">
+          <summary>¿Aceptan restricciones alimentarias?</summary>
+          <p>Sí, contamos con opciones vegetarianas, veganas y sin gluten. Por favor indícanos tus restricciones al momento de reservar y nuestro chef adaptará el menú.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Cuál es la política de cancelación?</summary>
+          <p>Las reservas de mesa pueden cancelarse hasta 4 horas antes sin cargo. Para eventos, se requiere un depósito que es reembolsable con al menos 15 días de anticipación.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Tienen estacionamiento?</summary>
+          <p>Sí, contamos con estacionamiento gratuito para nuestros comensales y valet parking disponible para eventos especiales.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Pueden hospedar eventos privados entre semana?</summary>
+          <p>Absolutamente. Ofrecemos renta exclusiva del espacio de martes a jueves con tarifas especiales. Contáctanos para más información.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Incluyen decoración en los eventos?</summary>
+          <p>Contamos con decoración básica incluida. También trabajamos con proveedores de decoración de confianza y puedes traer tu propio decorador.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- REDES SOCIALES -->
+    <section id="redes-sociales">
+    <div class="redes__layout">
+        <p class="redes__titulo">Sigue nuestra historia</p>
+        <div class="redes__links">
+        <a href="https://instagram.com/casafrida" target="_blank" class="redes__link">
+            Instagram <span>↗</span>
+        </a>
+        <a href="https://facebook.com/casafrida" target="_blank" class="redes__link">
+            Facebook <span>↗</span>
+        </a>
+        </div>
+    </div>
+    </section>
     
-    <main>
+  </main>
 
-    </main>
-
-    <script type="module" src="js/components/navbar.js"></script>
-    <script type="module" src="js/components/footer.js"></script>
+  <script type="module" src="js/components/navbar.js"></script>
+  <script type="module" src="js/components/footer.js"></script>
+  <script type="module" src="js/contacto.js"></script>
 </body>
 </html>
