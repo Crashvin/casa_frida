@@ -1,3 +1,5 @@
 .DS_Store        # Mac lo genera en cada carpeta automáticamente
 node_modules/    # Si usas npm en algún momento
 .env             # Aquí sí vivirían las API keys sensibles
+
+js/config.js

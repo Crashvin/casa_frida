@@ -1,9 +1,5 @@
-// ⚠️ IMPORTANTE: Cuando mandemos a producción
-// mover estas variables a un archivo .env
-// y agrégarlo al .gitignore
-const CALENDAR_API_KEY  = 'AIzaSyB4KH_iAgk3rlx4aWsAvxqoe4XmHhUT8II';
-const CALENDAR_ID       = 'casafridaeventostepotzotlan@gmail.com';
-const CALENDAR_API_URL  = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events`;
+const CALENDAR_API_KEY = CONFIG.CALENDAR_API_KEY;
+const CALENDAR_ID      = CONFIG.CALENDAR_ID;
 
 // Estado del calendario
 let fechasOcupadas     = [];
