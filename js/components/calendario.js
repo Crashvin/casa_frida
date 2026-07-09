@@ -1,26 +1,85 @@
-const fechasOcupadas = [
-  '2025-07-05',
-  '2025-07-12',
-  '2025-07-19',
-  '2025-07-26',
-  '2025-08-02',
-  '2025-08-09',
-  '2025-08-16',
-];
+// ⚠️ IMPORTANTE: Cuando mandemos a producción
+// mover estas variables a un archivo .env
+// y agrégarlo al .gitignore
+const CALENDAR_API_KEY  = 'AIzaSyB4KH_iAgk3rlx4aWsAvxqoe4XmHhUT8II';
+const CALENDAR_ID       = 'casafridaeventostepotzotlan@gmail.com';
+const CALENDAR_API_URL  = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events`;
 
-let fechaSeleccionada = null;
-let mesActual = new Date().getMonth();
-let anioActual = new Date().getFullYear();
+// Estado del calendario
+let fechasOcupadas     = [];
+let fechaSeleccionada  = null;
+let mesActual          = new Date().getMonth();
+let anioActual         = new Date().getFullYear();
 
 const meses = [
-  'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-  'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+  'Enero','Febrero','Marzo','Abril','Mayo','Junio',
+  'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'
 ];
-
-const dias = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+const dias = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
 
 // ─────────────────────────────────────────────
-// Función principal: renderizar el calendario
+// Obtener eventos de Google Calendar
+// ─────────────────────────────────────────────
+async function obtenerEventosCalendar() {
+  const hoy = new Date();
+  const fin = new Date();
+  fin.setMonth(fin.getMonth() + 6);
+
+  const params = new URLSearchParams({
+    key:          CALENDAR_API_KEY,
+    timeMin:      hoy.toISOString(),
+    timeMax:      fin.toISOString(),
+    singleEvents: true,
+    orderBy:      'startTime',
+    maxResults:   100,
+  });
+
+  try {
+    const response = await fetch(`${CALENDAR_API_URL}?${params}`);
+
+    if (!response.ok) throw new Error(`Error Calendar API: ${response.status}`);
+
+    const data = await response.json();
+
+    fechasOcupadas = data.items
+      .map(evento => {
+        const fechaInicio = evento.start.date || evento.start.dateTime?.split('T')[0];
+        const fechaFin    = evento.end.date   || evento.end.dateTime?.split('T')[0];
+        return generarRangoFechas(fechaInicio, fechaFin);
+      })
+      .flat();
+
+    fechasOcupadas = [...new Set(fechasOcupadas)];
+    return fechasOcupadas;
+
+  } catch (error) {
+    console.error('Error al obtener eventos:', error);
+    return [];
+  }
+}
+
+// ─────────────────────────────────────────────
+// Generar rango de fechas entre inicio y fin
+// ─────────────────────────────────────────────
+function generarRangoFechas(fechaInicio, fechaFin) {
+  if (!fechaInicio) return [];
+
+  const fechas = [];
+  const actual = new Date(fechaInicio);
+  const fin    = fechaFin ? new Date(fechaFin) : new Date(fechaInicio);
+
+  while (actual < fin) {
+    fechas.push(actual.toISOString().split('T')[0]);
+    actual.setDate(actual.getDate() + 1);
+  }
+
+  if (fechas.length === 0) fechas.push(fechaInicio);
+
+  return fechas;
+}
+
+// ─────────────────────────────────────────────
+// Renderizar el calendario
 // ─────────────────────────────────────────────
 function renderCalendario(mes, anio) {
   const contenedor = document.getElementById('calendario');
@@ -28,7 +87,6 @@ function renderCalendario(mes, anio) {
 
   contenedor.innerHTML = '';
 
-  // Header del calendario
   const header = document.createElement('div');
   header.classList.add('calendario__header');
 
@@ -37,11 +95,8 @@ function renderCalendario(mes, anio) {
   btnAnterior.innerHTML = '&#8592;';
   btnAnterior.setAttribute('aria-label', 'Mes anterior');
   btnAnterior.addEventListener('click', () => {
-    if (mes === 0) {
-      renderCalendario(11, anio - 1);
-    } else {
-      renderCalendario(mes - 1, anio);
-    }
+    if (mes === 0) renderCalendario(11, anio - 1);
+    else renderCalendario(mes - 1, anio);
   });
 
   const titulo = document.createElement('h3');
@@ -53,18 +108,14 @@ function renderCalendario(mes, anio) {
   btnSiguiente.innerHTML = '&#8594;';
   btnSiguiente.setAttribute('aria-label', 'Mes siguiente');
   btnSiguiente.addEventListener('click', () => {
-    if (mes === 11) {
-      renderCalendario(0, anio + 1);
-    } else {
-      renderCalendario(mes + 1, anio);
-    }
+    if (mes === 11) renderCalendario(0, anio + 1);
+    else renderCalendario(mes + 1, anio);
   });
 
   header.appendChild(btnAnterior);
   header.appendChild(titulo);
   header.appendChild(btnSiguiente);
 
-  // Nombres de días
   const gridDias = document.createElement('div');
   gridDias.classList.add('calendario__dias-semana');
   dias.forEach(dia => {
@@ -73,27 +124,24 @@ function renderCalendario(mes, anio) {
     gridDias.appendChild(span);
   });
 
-  // Grid de fechas
   const grid = document.createElement('div');
   grid.classList.add('calendario__grid');
 
   const primerDia = new Date(anio, mes, 1).getDay();
   const totalDias = new Date(anio, mes + 1, 0).getDate();
-  const hoy = new Date();
+  const hoy       = new Date();
 
-  // Espacios vacíos antes del primer día
   for (let i = 0; i < primerDia; i++) {
     const vacio = document.createElement('div');
     vacio.classList.add('calendario__dia', 'calendario__dia--vacio');
     grid.appendChild(vacio);
   }
 
-  // Días del mes
   for (let dia = 1; dia <= totalDias; dia++) {
-    const fecha = `${anio}-${String(mes + 1).padStart(2, '0')}-${String(dia).padStart(2, '0')}`;
+    const fecha    = `${anio}-${String(mes + 1).padStart(2, '0')}-${String(dia).padStart(2, '0')}`;
     const fechaObj = new Date(anio, mes, dia);
-    const esPasado = fechaObj < new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());
-    const esOcupado = fechasOcupadas.includes(fecha);
+    const esPasado       = fechaObj < new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());
+    const esOcupado      = fechasOcupadas.includes(fecha);
     const esSeleccionado = fechaSeleccionada === fecha;
 
     const celda = document.createElement('div');
@@ -121,26 +169,40 @@ function renderCalendario(mes, anio) {
 }
 
 // ─────────────────────────────────────────────
-// Seleccionar una fecha del calendario
+// Seleccionar fecha y llenar el formulario
 // ─────────────────────────────────────────────
 function seleccionarFecha(fecha, mes, anio) {
   fechaSeleccionada = fecha;
 
-  // Llenar automáticamente el campo de fecha en el formulario
   const inputFecha = document.getElementById('fecha_evento');
-  if (inputFecha) {
-    inputFecha.value = fecha;
-  }
+  if (inputFecha) inputFecha.value = fecha;
 
-  // Scroll suave al formulario
-  const formulario = document.getElementById('formulario-evento');
-  if (formulario) {
-    formulario.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+  const formulario = document.getElementById('disponibilidad-formulario');
+  if (formulario) formulario.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-  // Re-renderizar para mostrar la selección
   renderCalendario(mes, anio);
 }
 
+// ─────────────────────────────────────────────
+// Estado de carga
+// ─────────────────────────────────────────────
+function mostrarCargando() {
+  const contenedor = document.getElementById('calendario');
+  if (!contenedor) return;
+  contenedor.innerHTML = `
+    <div style="text-align:center;padding:2rem;color:var(--color-tertiary);
+    font-family:var(--font-secondary);font-size:var(--font-size-body-md);">
+      <p>Cargando disponibilidad...</p>
+    </div>`;
+}
+
+// ─────────────────────────────────────────────
 // Inicializar
-renderCalendario(mesActual, anioActual);
+// ─────────────────────────────────────────────
+async function inicializar() {
+  mostrarCargando();
+  await obtenerEventosCalendar();
+  renderCalendario(mesActual, anioActual);
+}
+
+inicializar();
