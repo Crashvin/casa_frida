@@ -1,35 +1,638 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Casa Frida, restaurante y salón de eventos en Tepotzotlán, Estado de México. Gastronomía Mar & Tierra, espacios únicos para bodas, celebraciones y eventos corporativos.">
-    <meta name="author" content="Casa Frida">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menú completo de Casa Frida — Desayunos, Entradas, Especiales de la Casa, Especialidades del Mar, Parrilladas, Molcajetes, Pizzas y más.">
+  <meta name="author" content="Casa Frida">
+  <title>Menú — Casa Frida</title>
 
-    <title>Menú — Casa Frida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="css/base/reset.css">
-        <link rel="stylesheet" href="css/base/variables.css">
-        <link rel="stylesheet" href="css/base/typography.css">
-        <link rel="stylesheet" href="css/layout/main.css">
-        <link rel="stylesheet" href="css/ui/navbar.css">
-        <link rel="stylesheet" href="css/ui/footer.css">
-        <link rel="stylesheet" href="css/ui/buttons.css">
-        <link rel="stylesheet" href="css/ui/hero.css">
-        <link rel="stylesheet" href="css/ui/sections.css">
-
+  <link rel="stylesheet" href="css/base/reset.css">
+  <link rel="stylesheet" href="css/base/variables.css">
+  <link rel="stylesheet" href="css/base/typography.css">
+  <link rel="stylesheet" href="css/layout/main.css">
+  <link rel="stylesheet" href="css/ui/navbar.css">
+  <link rel="stylesheet" href="css/ui/footer.css">
+  <link rel="stylesheet" href="css/ui/buttons.css">
+  <link rel="stylesheet" href="css/ui/menu.css">
+  <link rel="stylesheet" href="css/ui/restaurante.css">
 </head>
 <body>
-    
-    <main>
 
-    </main>
+  <main>
 
-    <script type="module" src="js/components/navbar.js"></script>
-    <script type="module" src="js/components/footer.js"></script>
+    <!-- HEADER MENÚ -->
+    <section id="menu-header">
+      <div class="menu-header__content">
+        <p class="section__etiqueta">Casa Frida · Tepotzotlán</p>
+        <h1>Nuestro Menú</h1>
+        <p class="menu-header__subtitulo">Gastronomía mexicana de autor. Ingredientes frescos, recetas de herencia y el toque único de Casa Frida.</p>
+      </div>
+
+      <!-- Navegación sticky de categorías -->
+      <nav class="menu-sticky-nav" id="menuStickyNav">
+        <a href="#desayunos" class="menu-sticky-nav__link">Desayunos</a>
+        <a href="#entradas" class="menu-sticky-nav__link">Entradas</a>
+        <a href="#sopas" class="menu-sticky-nav__link">Sopas</a>
+        <a href="#especiales-casa" class="menu-sticky-nav__link">Especiales</a>
+        <a href="#mar" class="menu-sticky-nav__link">Del Mar</a>
+        <a href="#parrilladas" class="menu-sticky-nav__link">Parrilladas</a>
+        <a href="#molcajetes" class="menu-sticky-nav__link">Molcajetes</a>
+        <a href="#cortes" class="menu-sticky-nav__link">Cortes</a>
+        <a href="#alambres" class="menu-sticky-nav__link">Alambres</a>
+        <a href="#pizzas" class="menu-sticky-nav__link">Pizzas</a>
+        <a href="#botanas" class="menu-sticky-nav__link">Botanas</a>
+      </nav>
+    </section>
+
+    <!-- DESAYUNOS -->
+    <section id="desayunos" class="menu-seccion">
+      <header class="menu-seccion__header">
+        <h2>Desayunos</h2>
+        <p class="menu-seccion__nota">Todos incluyen jugo o fruta, café o té y 1 pieza de pan dulce.</p>
+      </header>
+      <div class="menu-seccion__grid">
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Chilaquiles</h3>
+            <p>Salsa Verde, Roja o Habanero. Con Arrachera, Pollo, Huevo, Bisteck o Costilla.</p>
+            <span class="platillo__tag">Pídelos Gratinados +$35</span>
+          </div>
+          <span class="platillo__precio">$160</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Enchiladas</h3>
+            <p>Salsa Verde, Roja o Habanero. Con Arrachera, Pollo, Huevo, Bisteck o Costilla.</p>
+            <span class="platillo__tag">Pídelas Gratinadas +$35</span>
+          </div>
+          <span class="platillo__precio">$160</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Enfrijoladas</h3>
+            <p>Con nuestros frijoles de la casa, rellenas de pollo con crema y queso.</p>
+          </div>
+          <span class="platillo__precio">$160</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Enmoladas</h3>
+            <p>Mole de la casa, rellenas de pollo con crema y queso.</p>
+          </div>
+          <span class="platillo__precio">$160</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Molletes</h3>
+            <p>Pan crujiente con frijoles de la casa, queso mozarella y pico de gallo. Con Longaniza, Bisteck, Tocino, Jamón o Arrachera.</p>
+          </div>
+          <span class="platillo__precio">$160</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Omelette</h3>
+            <p>Relleno de Jamón y queso o Champiñones y queso.</p>
+          </div>
+          <span class="platillo__precio">$160</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Huevos al Gusto</h3>
+            <p>Estrellados, Revueltos o Bañados en Salsa.</p>
+          </div>
+          <span class="platillo__precio">$160</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Huevos Poblanos</h3>
+            <p>Revueltos acompañados de Rajas Poblanas y Queso Oaxaca.</p>
+          </div>
+          <span class="platillo__precio">$160</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Hot-Cakes o Waffles</h3>
+            <p>Acompañados con fruta, miel, maple o lechera.</p>
+          </div>
+          <span class="platillo__precio">$160</span>
+        </article>
+        <article class="platillo__item platillo__item--extra">
+          <div class="platillo__info">
+            <h3>Extras</h3>
+            <p>Ingrediente Extra / Copa de Fruta</p>
+          </div>
+          <div class="platillo__precios-dobles">
+            <span>Extra <strong>$25</strong></span>
+            <span>Copa <strong>$65</strong></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ENTRADAS -->
+    <section id="entradas" class="menu-seccion menu-seccion--alt">
+      <header class="menu-seccion__header">
+        <h2>Entradas</h2>
+      </header>
+      <div class="menu-seccion__grid">
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Calamares Crispy</h3>
+            <p>Crujientes y empanizados calamares acompañados de nuestro aderezo de la casa.</p>
+          </div>
+          <span class="platillo__precio">$140</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Pescadillas</h3>
+            <p>4 Piezas acompañadas de aguacate.</p>
+          </div>
+          <span class="platillo__precio">$140</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Chicharrones de Pulpo</h3>
+            <p>Doraditos y crujientes chicharrones acompañados de nuestros aderezos.</p>
+          </div>
+          <span class="platillo__precio">$140</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Sopecitos</h3>
+            <p>4 Piezas servidas con frijoles, lechuga, crema y queso.</p>
+          </div>
+          <span class="platillo__precio">$105</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- SOPAS -->
+    <section id="sopas" class="menu-seccion">
+      <header class="menu-seccion__header">
+        <h2>Sopas</h2>
+      </header>
+      <div class="menu-seccion__grid">
+        <article class="platillo__item">
+          <div class="platillo__info"><h3>Consomé Ranchero</h3></div>
+          <span class="platillo__precio">$65</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info"><h3>Sopa Azteca</h3></div>
+          <span class="platillo__precio">$65</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info"><h3>Espaguetti a la Crema</h3></div>
+          <span class="platillo__precio">$65</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info"><h3>Espaguetti a la Mantequilla</h3></div>
+          <span class="platillo__precio">$65</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info"><h3>Arroz</h3></div>
+          <span class="platillo__precio">$65</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info"><h3>Consomé de Birria</h3></div>
+          <span class="platillo__precio">$65</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ESPECIALES DE LA CASA -->
+    <section id="especiales-casa" class="menu-seccion menu-seccion--alt">
+      <header class="menu-seccion__header">
+        <h2>Especiales de la Casa</h2>
+      </header>
+      <div class="menu-seccion__grid">
+        <article class="platillo__item platillo__item--destacado">
+          <div class="platillo__info">
+            <h3>Ensalada FRIDA <span class="platillo__badge">Especial</span></h3>
+            <p>Mezcla de lechugas, manzana, fresa, pasta, queso panela, semillas y crotones.</p>
+            <span class="platillo__tag">Elige: Pechuga Asada, Arrachera o Camarones</span>
+          </div>
+          <span class="platillo__precio">$160</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Costilla Asada</h3>
+            <p>Jugosa costilla asada, servida con papas a la francesa y ensalada fresca.</p>
+          </div>
+          <span class="platillo__precio">$170</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Milanesa de Res</h3>
+            <p>Clásica milanesa crujiente, acompañada de papas a la francesa y ensalada.</p>
+          </div>
+          <span class="platillo__precio">$170</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Pechuga de Pollo</h3>
+            <p>Pechuga asada o empanizada, servida con papas a la francesa y ensalada.</p>
+          </div>
+          <span class="platillo__precio">$170</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Enchiladas Suizas</h3>
+            <p>Tortillas rellenas de pollo bañadas en salsa verde cremosa con gratinado de queso.</p>
+          </div>
+          <span class="platillo__precio">$170</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Pancita</h3>
+            <p>Tradicional pancita mexicana, cocida lentamente en un caldo lleno de sabor.</p>
+          </div>
+          <span class="platillo__precio">$150</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Birria de Res</h3>
+            <p>Suave carne de res en su jugo, con caldo especiado y lleno de tradición.</p>
+          </div>
+          <span class="platillo__precio">$150</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Flautas Bañadas</h3>
+            <p>Crujientes flautas rellenas de pollo, bañadas en salsa a tu elección.</p>
+            <span class="platillo__tag">Elige: Roja, Verde o Mole</span>
+          </div>
+          <span class="platillo__precio">$150</span>
+        </article>
+        <article class="platillo__item platillo__item--destacado">
+          <div class="platillo__info">
+            <h3>Enmoladas FRIDA <span class="platillo__badge">Especial</span></h3>
+            <p>Tortillas rellenas de pollo con longaniza doradita, bañadas en mole de la casa.</p>
+          </div>
+          <span class="platillo__precio">$180</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Quesabirria</h3>
+            <p>Combinación de birria de res y queso derretido en tortilla dorada.</p>
+          </div>
+          <span class="platillo__precio">$85</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ESPECIALES DEL MAR -->
+    <section id="mar" class="menu-seccion">
+      <header class="menu-seccion__header">
+        <h2>Especiales del Mar</h2>
+      </header>
+      <div class="menu-seccion__grid">
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Cóctel de Camarón, Pulpo o Mixto</h3>
+            <p>Fresco y al momento, con un toque de salsa especial.</p>
+          </div>
+          <span class="platillo__precio">$140</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Tostada de Camarón o Pulpo Crudo</h3>
+            <p>Mariscos frescos en tostada con toque cítrico y especias.</p>
+          </div>
+          <span class="platillo__precio">$95</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Tostada de Camarón o Pulpo Frida</h3>
+            <p>Mariscos salteados al estilo de la casa, servidos sobre tostada crujiente.</p>
+          </div>
+          <span class="platillo__precio">$105</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Empanadas de Camarón o Pulpo Frida</h3>
+            <p>Empanadas doraditas rellenas de mariscos salteados con queso.</p>
+          </div>
+          <span class="platillo__precio">$180</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Tacos Gobernador</h3>
+            <p>Tortilla de harina rellena de camarones con morrón, jitomate, cebolla y queso.</p>
+          </div>
+          <span class="platillo__precio">$180</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Espagueti con Camarón o Pulpo</h3>
+            <p>Pasta bañada con un toque de queso, acompañada de mariscos.</p>
+          </div>
+          <span class="platillo__precio">$180</span>
+        </article>
+        <article class="platillo__item platillo__item--destacado">
+          <div class="platillo__info">
+            <h3>Camarones Frida <span class="platillo__badge">Especial</span></h3>
+            <p>Servidos con arroz y ensalada.</p>
+            <span class="platillo__tag">Mantequilla, Empanizados, A la Diabla, Mojo o Ajillo</span>
+          </div>
+          <span class="platillo__precio">$230</span>
+        </article>
+        <article class="platillo__item platillo__item--destacado">
+          <div class="platillo__info">
+            <h3>Filete de Pescado Frida <span class="platillo__badge">Especial</span></h3>
+            <p>Filete preparado al gusto acompañado de arroz y ensalada.</p>
+            <span class="platillo__tag">Mantequilla, Empanizados, Mojo o Ajillo</span>
+          </div>
+          <span class="platillo__precio">$230</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Chilaquiles con Camarón</h3>
+            <p>Chilaquiles bañados en salsa con camarones salteados.</p>
+            <span class="platillo__tag">Elige: Salsa Verde, Roja o Habanero</span>
+          </div>
+          <span class="platillo__precio">$180</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PARRILLADAS -->
+    <section id="parrilladas" class="menu-seccion menu-seccion--alt">
+      <header class="menu-seccion__header">
+        <h2>Parrilladas</h2>
+        <p class="menu-seccion__nota">Incluyen: Tortillas, Cuaresmeño Relleno, Cebollas & Nopales Asados.</p>
+      </header>
+      <div class="menu-seccion__grid menu-seccion__grid--parrilladas">
+        <div class="parrillada__header">
+          <span></span><span>2 Pers.</span><span>4 Pers.</span>
+        </div>
+        <article class="platillo__item platillo__item--parrillada">
+          <div class="platillo__info"><h3>Parrillada de Carne</h3><p>Combinación de carnes.</p></div>
+          <div class="platillo__precios-dobles">
+            <span><strong>$360</strong></span>
+            <span><strong>$620</strong></span>
+          </div>
+        </article>
+        <article class="platillo__item platillo__item--parrillada">
+          <div class="platillo__info"><h3>Parrillada de Mariscos</h3><p>Combinación de mariscos.</p></div>
+          <div class="platillo__precios-dobles">
+            <span><strong>$390</strong></span>
+            <span><strong>$650</strong></span>
+          </div>
+        </article>
+        <article class="platillo__item platillo__item--parrillada platillo__item--destacado">
+          <div class="platillo__info"><h3>Parrillada Mixta <span class="platillo__badge">Especial</span></h3><p>Combinación de mariscos y carnes.</p></div>
+          <div class="platillo__precios-dobles">
+            <span><strong>$400</strong></span>
+            <span><strong>$680</strong></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MOLCAJETES -->
+    <section id="molcajetes" class="menu-seccion">
+      <header class="menu-seccion__header">
+        <h2>Molcajetes</h2>
+        <p class="menu-seccion__nota">Una mezcla irresistible de carnes o mariscos, salsas y queso fundido. Cada molcajete guarda el auténtico sabor mexicano y el toque especial de Casa Frida.</p>
+      </header>
+      <div class="menu-seccion__grid">
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Molcajete de Carne</h3>
+            <p>Combinación de carnes con queso, nopales y cebollitas, bañado en salsa especial de la casa.</p>
+          </div>
+          <span class="platillo__precio">$360</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Molcajete de Mariscos</h3>
+            <p>Combinación de mariscos con queso, nopales y cebollitas, bañado en salsa especial de la casa.</p>
+          </div>
+          <span class="platillo__precio">$390</span>
+        </article>
+        <article class="platillo__item platillo__item--destacado">
+          <div class="platillo__info">
+            <h3>Molcajete Mixto <span class="platillo__badge">Especial</span></h3>
+            <p>Combinación de mariscos y carnes con queso, nopales y cebollitas, bañado en salsa especial de la casa.</p>
+          </div>
+          <span class="platillo__precio">$390</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- CORTES -->
+    <section id="cortes" class="menu-seccion menu-seccion--alt">
+      <header class="menu-seccion__header">
+        <h2>Cortes</h2>
+        <p class="menu-seccion__nota">Incluyen 2 guarniciones a elegir: Verduras a la Parrilla, Papas a la Francesa, Ensalada Verde o Arroz.</p>
+      </header>
+      <div class="menu-seccion__grid">
+        <article class="platillo__item">
+          <div class="platillo__info"><h3>Rib Eye</h3></div>
+          <span class="platillo__precio">$390</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info"><h3>Arrachera Texas</h3></div>
+          <span class="platillo__precio">$350</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info"><h3>T-Bone</h3></div>
+          <span class="platillo__precio">$390</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ALAMBRES -->
+    <section id="alambres" class="menu-seccion">
+      <header class="menu-seccion__header">
+        <h2>Alambres</h2>
+      </header>
+      <div class="menu-seccion__grid">
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Alambre de Arrachera</h3>
+            <p>Arrachera jugosa al estilo casero, con morrón, cebolla, tocino y queso.</p>
+          </div>
+          <span class="platillo__precio">$160</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Alambre de Bisteck</h3>
+            <p>Trozos de bisteck suave con morrón, cebolla, tocino y queso.</p>
+          </div>
+          <span class="platillo__precio">$140</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Alambre de Mariscos</h3>
+            <p>Camarón y pulpo salteados con morrón, cebolla, tocino y queso.</p>
+          </div>
+          <span class="platillo__precio">$180</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Alambre de Pechuga de Pollo</h3>
+            <p>Pechuga doradita con morrón, cebolla, tocino y queso.</p>
+          </div>
+          <span class="platillo__precio">$140</span>
+        </article>
+        <article class="platillo__item platillo__item--destacado">
+          <div class="platillo__info">
+            <h3>Alambre Mixto <span class="platillo__badge">Especial</span></h3>
+            <p>Longaniza, bisteck, arrachera y chistorra con morrón, cebolla, tocino y queso.</p>
+          </div>
+          <span class="platillo__precio">$160</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PIZZAS -->
+    <section id="pizzas" class="menu-seccion menu-seccion--alt">
+      <header class="menu-seccion__header">
+        <h2>Pizzas</h2>
+        <p class="menu-seccion__nota">Masa artesanal, salsa casera y mezcla de quesos.</p>
+      </header>
+      <div class="pizzas__precios-base">
+        <span>Individual <strong>$90</strong></span>
+        <span>Familiar <strong>$210</strong></span>
+      </div>
+      <div class="menu-seccion__grid">
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Hawaiana</h3>
+            <p>Dulce piña y jamón sobre queso derretido.</p>
+          </div>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Pepperoni</h3>
+            <p>Tradicional, con rebanadas de pepperoni ligeramente tostadas.</p>
+          </div>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Vegetariana</h3>
+            <p>Champiñón, morrón, jitomate, cebolla y aceitunas, fresca y ligera.</p>
+          </div>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Mexicana</h3>
+            <p>Arrachera, longaniza, salchicha, chile cuaresmeño y cebolla.</p>
+          </div>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Mariscos</h3>
+            <p>Camarón, pulpo y calamar salteados con cebolla y morrón.</p>
+          </div>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Birria</h3>
+            <p>La fusión perfecta entre pizza y birria, jugosa y llena de sabor.</p>
+          </div>
+        </article>
+        <article class="platillo__item platillo__item--destacado">
+          <div class="platillo__info">
+            <h3>Frida Especial <span class="platillo__badge">Especial</span></h3>
+            <p>Arrachera, tocino, jamón, aceituna y champiñones.</p>
+          </div>
+        </article>
+      </div>
+      <div class="pizzas__precios-especial">
+        <p>Pizza 4 Estaciones — Individual <strong>$120</strong> / Familiar <strong>$280</strong></p>
+      </div>
+    </section>
+
+    <!-- BOTANAS Y COMPLEMENTOS -->
+    <section id="botanas" class="menu-seccion">
+      <header class="menu-seccion__header">
+        <h2>Botanas & Complementos</h2>
+      </header>
+      <div class="menu-seccion__grid">
+        <article class="platillo__item platillo__item--destacado">
+          <div class="platillo__info">
+            <h3>Plato Botanero Frida <span class="platillo__badge">Especial</span></h3>
+            <p>Todo en uno: alitas, costillitas, papas a la francesa y bastones de verdura.</p>
+          </div>
+          <span class="platillo__precio">$310</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Alitas (10 pzas)</h3>
+            <p>Crujientes y bañadas en tu salsa favorita: mango habanero, búfalo o BBQ.</p>
+          </div>
+          <span class="platillo__precio">$180</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Costillitas (8 pzas)</h3>
+            <p>Doradas y jugosas con tu salsa favorita: mango habanero, búfalo o BBQ.</p>
+          </div>
+          <span class="platillo__precio">$180</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Tabla de Jamón y Quesos</h3>
+            <p>Selección de quesos y jamones (pierna y serrano) para compartir.</p>
+          </div>
+          <span class="platillo__precio">$220</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Queso Fundido</h3>
+            <p>Agrega arrachera, longaniza o chistorra.</p>
+            <span class="platillo__tag">+$35 con proteína</span>
+          </div>
+          <span class="platillo__precio">$95</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Guacamole</h3>
+            <p>Cremoso aguacate con un toque de limón y cilantro.</p>
+          </div>
+          <span class="platillo__precio">$85</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Papas a la Francesa</h3>
+            <p>Doradas, crujientes y saladas al estilo clásico.</p>
+          </div>
+          <span class="platillo__precio">$80</span>
+        </article>
+        <article class="platillo__item">
+          <div class="platillo__info">
+            <h3>Bastones de Verdura</h3>
+            <p>Pepino, jícama y zanahoria con chamoy y chilito.</p>
+          </div>
+          <span class="platillo__precio">$90</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="menu-cta">
+      <div class="cta__content">
+        <p class="section__etiqueta">¿Listo para vivir la experiencia?</p>
+        <h2 class="cta__titulo">Reserva tu Mesa</h2>
+        <p class="cta__subtitulo">Ven a disfrutar de nuestra cocina en un ambiente único. Reservaciones recomendadas.</p>
+        <div class="cta__botones">
+          <a href="contacto.html" class="btn btn--primary">Reservar ahora</a>
+          <a href="https://wa.me/527141234567" target="_blank" class="btn btn--secondary">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/components/navbar.js"></script>
+  <script type="module" src="js/components/footer.js"></script>
+  <script type="module" src="js/menu.js"></script>
 </body>
 </html>

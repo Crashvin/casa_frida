@@ -1,0 +1,609 @@
+/* === HERO RESTAURANTE === */
+#restaurante-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://placehold.co/1920x1080/1a1c1e/fff?text=Casa+Frida');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+#restaurante-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+#restaurante-hero .hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  padding: 0 var(--margin-desktop);
+}
+
+/* === MENÚ PREVIEW === */
+#menu-preview {
+  background: var(--color-neutral-bg);
+  padding: var(--section-gap) var(--margin-desktop);
+}
+
+.menu-nav {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-neutral-surface);
+  scrollbar-width: none;
+}
+
+.menu-nav::-webkit-scrollbar { display: none; }
+
+.menu-nav__btn {
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius-full);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-label-md);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-tertiary);
+  background: transparent;
+  border: 1px solid var(--color-neutral-surface);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.menu-nav__btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.menu-nav__btn--active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.menu-categoria {
+  display: none;
+}
+
+.menu-categoria--active {
+  display: block;
+}
+
+.menu-categoria__nota {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+  font-style: italic;
+  margin-bottom: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-neutral-surface);
+  border-radius: var(--border-radius-md);
+  border-left: 3px solid var(--color-primary);
+}
+
+.menu-categoria__cta {
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-neutral-surface);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.menu-categoria__cta p {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+}
+
+.menu-preview__cta {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-neutral-surface);
+}
+
+.menu-preview__cta .btn--secondary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* === PLATILLOS LISTA === */
+.platillos__lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.platillo__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-neutral-surface);
+  transition: var(--transition-default);
+}
+
+.platillo__item:last-child { border-bottom: none; }
+
+.platillo__item--destacado {
+  background: rgba(145, 71, 43, 0.03);
+  padding: var(--space-4);
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(145, 71, 43, 0.1);
+  margin: var(--space-1) 0;
+}
+
+.platillo__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+}
+
+.platillo__info h3 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-neutral-text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.platillo__info p {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+  line-height: 1.5;
+}
+
+.platillo__badge {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: rgba(145, 71, 43, 0.1);
+  padding: 2px var(--space-2);
+  border-radius: var(--border-radius-full);
+}
+
+.platillo__tag {
+  font-size: var(--font-size-caption);
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
+}
+
+.platillo__precio {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-neutral-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.platillo__precios-dobles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  align-items: flex-end;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.platillo__precios-dobles span {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+}
+
+.platillo__precios-dobles strong {
+  color: var(--color-neutral-text);
+  font-weight: var(--font-semibold);
+}
+
+/* === EL ESPACIO === */
+#el-espacio {
+  background: var(--color-neutral-surface);
+  padding: var(--section-gap) var(--margin-desktop);
+}
+
+.espacio__galeria {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 240px 240px;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+.espacio__figura {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.espacio__figura--large {
+  grid-row: span 2;
+}
+
+.espacio__figura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition-default);
+}
+
+.espacio__figura:hover img {
+  transform: scale(1.03);
+}
+
+/* === HORARIOS + CTA === */
+#horarios-cta {
+  background: var(--color-neutral-bg);
+  padding: var(--section-gap) var(--margin-desktop);
+}
+
+.horarios-cta__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.horarios__bloque {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.horarios__bloque h2 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-neutral-text);
+}
+
+.horarios__intro {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+  line-height: 1.7;
+}
+
+.horarios__tabla {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.horario__fila {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-neutral-surface);
+  font-size: var(--font-size-body-md);
+}
+
+.horario__fila span:first-child { color: var(--color-tertiary); }
+.horario__fila span:last-child {
+  font-weight: var(--font-semibold);
+  color: var(--color-neutral-text);
+}
+
+.reserva__bloque {
+  background: var(--color-neutral-surface);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-4);
+}
+
+.reserva__icono { font-size: 2.5rem; }
+
+.reserva__bloque h3 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-md);
+  color: var(--color-neutral-text);
+  font-weight: var(--font-medium);
+}
+
+.reserva__bloque p {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+  line-height: 1.6;
+}
+
+/* ============================================
+   MENU.CSS — Menú Editorial Completo
+   ============================================ */
+
+/* === HEADER MENÚ === */
+#menu-header {
+  background: var(--color-neutral-bg);
+  padding: calc(var(--section-gap) + 80px) var(--margin-desktop) 0;
+}
+
+.menu-header__content {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: var(--space-8);
+}
+
+.menu-header__content h1 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-display-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-neutral-text);
+  line-height: 1.1;
+  margin: var(--space-3) 0;
+}
+
+.menu-header__subtitulo {
+  font-size: var(--font-size-body-lg);
+  color: var(--color-tertiary);
+  line-height: 1.7;
+}
+
+/* === STICKY NAV === */
+.menu-sticky-nav {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-top: 1px solid var(--color-neutral-surface);
+  position: relative;
+  background: var(--color-neutral-bg);
+}
+
+.menu-sticky-nav::-webkit-scrollbar { display: none; }
+
+.menu-sticky-nav--fixed {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  box-shadow: 0 2px 12px rgba(26, 28, 30, 0.06);
+  border-bottom: 1px solid var(--color-neutral-surface);
+  padding: 0 var(--margin-desktop);
+}
+
+.menu-sticky-nav__link {
+  flex-shrink: 0;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-label-md);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-tertiary);
+  border-bottom: 2px solid transparent;
+  transition: var(--transition-default);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.menu-sticky-nav__link:hover {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.menu-sticky-nav__link--active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+/* === SECCIONES DEL MENÚ === */
+.menu-seccion {
+  padding: var(--section-gap) var(--margin-desktop);
+  background: var(--color-neutral-bg);
+}
+
+.menu-seccion--alt {
+  background: var(--color-neutral-surface);
+}
+
+.menu-seccion__header {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--color-neutral-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.menu-seccion__header h2 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-headline-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-neutral-text);
+}
+
+.menu-seccion__nota {
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+  font-style: italic;
+  max-width: 480px;
+  text-align: right;
+}
+
+.menu-seccion__grid {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Parrilladas con header de columnas */
+.menu-seccion__grid--parrilladas .parrillada__header {
+  display: grid;
+  grid-template-columns: 1fr 80px 80px;
+  gap: var(--space-4);
+  padding: var(--space-2) 0 var(--space-3);
+  border-bottom: 1px solid var(--color-neutral-surface);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-bold);
+  color: var(--color-tertiary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.platillo__item--parrillada {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-4);
+}
+
+.platillo__item--parrillada .platillo__precios-dobles {
+  display: grid;
+  grid-template-columns: 80px 80px;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.platillo__item--parrillada .platillo__precios-dobles span {
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-semibold);
+  color: var(--color-neutral-text);
+}
+
+/* Pizzas precios base */
+.pizzas__precios-base {
+  display: flex;
+  gap: var(--space-6);
+  margin-bottom: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-primary);
+  border-radius: var(--border-radius-md);
+  width: fit-content;
+}
+
+.pizzas__precios-base span {
+  font-size: var(--font-size-body-md);
+  color: rgba(255,255,255,0.8);
+}
+
+.pizzas__precios-base strong {
+  color: #fff;
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-bold);
+}
+
+.pizzas__precios-especial {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-neutral-surface);
+  font-size: var(--font-size-body-md);
+  color: var(--color-tertiary);
+}
+
+.pizzas__precios-especial strong {
+  color: var(--color-neutral-text);
+  font-weight: var(--font-semibold);
+}
+
+/* === MENÚ CTA FINAL === */
+#menu-cta {
+  background: var(--color-primary-dark);
+  padding: var(--section-gap) var(--margin-desktop);
+  text-align: center;
+}
+
+#menu-cta .cta__content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+#menu-cta .section__etiqueta { color: var(--color-primary-light); }
+#menu-cta .cta__titulo { color: #fff; }
+#menu-cta .cta__subtitulo { color: rgba(255,255,255,0.8); }
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+  #menu-preview,
+  #el-espacio,
+  #horarios-cta {
+    padding: var(--space-10) var(--margin-mobile);
+  }
+
+  .horarios-cta__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .espacio__galeria {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .espacio__figura--large {
+    grid-row: span 1;
+  }
+
+  .espacio__figura img {
+    height: 280px;
+  }
+
+  #menu-header {
+    padding: calc(var(--space-10) + 80px) var(--margin-mobile) 0;
+  }
+
+  .menu-header__content h1 {
+    font-size: var(--font-size-headline-xl);
+  }
+
+  .menu-seccion {
+    padding: var(--space-8) var(--margin-mobile);
+  }
+
+  .menu-seccion__header {
+    flex-direction: column;
+  }
+
+  .menu-seccion__nota {
+    text-align: left;
+  }
+
+  .menu-sticky-nav--fixed {
+    padding: 0 var(--margin-mobile);
+    top: 64px;
+  }
+
+  .platillo__item--parrillada {
+    grid-template-columns: 1fr;
+  }
+
+  .platillo__item--parrillada .platillo__precios-dobles {
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+  }
+
+  #menu-cta {
+    padding: var(--space-10) var(--margin-mobile);
+  }
+}
+

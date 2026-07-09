@@ -1,35 +1,325 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Casa Frida, restaurante y salón de eventos en Tepotzotlán, Estado de México. Gastronomía Mar & Tierra, espacios únicos para bodas, celebraciones y eventos corporativos.">
-    <meta name="author" content="Casa Frida">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre el restaurante Casa Frida en Tepotzotlán. Gastronomía mexicana de autor, especialidades del mar y tierra en un espacio único.">
+  <meta name="author" content="Casa Frida">
+  <title>Restaurante — Casa Frida</title>
 
-    <title>Restaurante — Casa Frida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="css/base/reset.css">
-        <link rel="stylesheet" href="css/base/variables.css">
-        <link rel="stylesheet" href="css/base/typography.css">
-        <link rel="stylesheet" href="css/layout/main.css">
-        <link rel="stylesheet" href="css/ui/navbar.css">
-        <link rel="stylesheet" href="css/ui/footer.css">
-        <link rel="stylesheet" href="css/ui/buttons.css">
-        <link rel="stylesheet" href="css/ui/hero.css">
-        <link rel="stylesheet" href="css/ui/sections.css">
-
+  <link rel="stylesheet" href="css/base/reset.css">
+  <link rel="stylesheet" href="css/base/variables.css">
+  <link rel="stylesheet" href="css/base/typography.css">
+  <link rel="stylesheet" href="css/layout/main.css">
+  <link rel="stylesheet" href="css/ui/navbar.css">
+  <link rel="stylesheet" href="css/ui/footer.css">
+  <link rel="stylesheet" href="css/ui/buttons.css">
+  <link rel="stylesheet" href="css/ui/menu.css">
+  <link rel="stylesheet" href="css/ui/restaurante.css">
 </head>
 <body>
-    
-    <main>
 
-    </main>
+  <main>
 
-    <script type="module" src="js/components/navbar.js"></script>
-    <script type="module" src="js/components/footer.js"></script>
+    <!-- HERO -->
+    <section id="restaurante-hero">
+      <div class="hero__content">
+        <p class="hero__etiqueta">Temporada 2025</p>
+        <h1 class="hero__titulo">Un Sabor de Herencia.</h1>
+        <a href="menu.html" class="btn btn--primary">Explorar Menú</a>
+      </div>
+    </section>
+
+    <!-- MENÚ PREVIEW -->
+    <section id="menu-preview">
+      <nav class="menu-nav">
+        <button class="menu-nav__btn menu-nav__btn--active" data-categoria="desayunos">Desayunos</button>
+        <button class="menu-nav__btn" data-categoria="entradas">Entradas</button>
+        <button class="menu-nav__btn" data-categoria="especiales">Especiales</button>
+        <button class="menu-nav__btn" data-categoria="mar">Del Mar</button>
+        <button class="menu-nav__btn" data-categoria="parrilladas">Parrilladas</button>
+        <button class="menu-nav__btn" data-categoria="postres">Postres</button>
+      </nav>
+
+      <!-- Desayunos -->
+      <div class="menu-categoria menu-categoria--active" id="cat-desayunos">
+        <p class="menu-categoria__nota">Todos nuestros desayunos incluyen jugo o fruta, café o té y 1 pieza de pan dulce.</p>
+        <div class="platillos__lista">
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Chilaquiles</h3>
+              <p>Salsa Verde, Roja o Habanero. Acompáñalos con Arrachera, Pollo, Huevo, Bisteck o Costilla.</p>
+              <span class="platillo__tag">Pídelos Gratinados +$35</span>
+            </div>
+            <span class="platillo__precio">$160</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Enchiladas</h3>
+              <p>Salsa Verde, Roja o Habanero. Con Arrachera, Pollo, Huevo, Bisteck o Costilla.</p>
+              <span class="platillo__tag">Pídelas Gratinadas +$35</span>
+            </div>
+            <span class="platillo__precio">$160</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Huevos Poblanos</h3>
+              <p>Revueltos acompañados de Rajas Poblanas y Queso Oaxaca.</p>
+            </div>
+            <span class="platillo__precio">$160</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Molletes</h3>
+              <p>Pan crujiente con frijoles de la casa, queso mozarella y pico de gallo. Con Longaniza, Bisteck, Tocino, Jamón o Arrachera.</p>
+            </div>
+            <span class="platillo__precio">$160</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Hot-Cakes o Waffles</h3>
+              <p>Acompañados con fruta, miel, maple o lechera.</p>
+            </div>
+            <span class="platillo__precio">$160</span>
+          </article>
+        </div>
+      </div>
+
+      <!-- Entradas -->
+      <div class="menu-categoria" id="cat-entradas">
+        <div class="platillos__lista">
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Calamares Crispy</h3>
+              <p>Crujientes y empanizados calamares acompañados de nuestro aderezo de la casa.</p>
+            </div>
+            <span class="platillo__precio">$140</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Chicharrones de Pulpo</h3>
+              <p>Doraditos y crujientes chicharrones acompañados de nuestros aderezos.</p>
+            </div>
+            <span class="platillo__precio">$140</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Pescadillas</h3>
+              <p>4 Piezas acompañadas de aguacate.</p>
+            </div>
+            <span class="platillo__precio">$140</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Sopecitos</h3>
+              <p>4 Piezas servidas con frijoles, lechuga, crema y queso.</p>
+            </div>
+            <span class="platillo__precio">$105</span>
+          </article>
+        </div>
+      </div>
+
+      <!-- Especiales -->
+      <div class="menu-categoria" id="cat-especiales">
+        <div class="platillos__lista">
+          <article class="platillo__item platillo__item--destacado">
+            <div class="platillo__info">
+              <h3>Ensalada FRIDA <span class="platillo__badge">Especial</span></h3>
+              <p>Mezcla de lechugas, manzana, fresa, pasta, queso panela, semillas y crotones.</p>
+              <span class="platillo__tag">Elige tu proteína: Pechuga Asada, Arrachera o Camarones</span>
+            </div>
+            <span class="platillo__precio">$160</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Birria de Res</h3>
+              <p>Suave carne de res en su jugo, con caldo especiado y lleno de tradición.</p>
+            </div>
+            <span class="platillo__precio">$150</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Enmoladas FRIDA <span class="platillo__badge">Especial</span></h3>
+              <p>Tortillas rellenas de pollo con longaniza doradita, bañadas en mole de la casa.</p>
+            </div>
+            <span class="platillo__precio">$180</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Quesabirria</h3>
+              <p>Combinación de birria de res y queso derretido en tortilla dorada.</p>
+            </div>
+            <span class="platillo__precio">$85</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Flautas Bañadas</h3>
+              <p>Crujientes flautas rellenas de pollo, bañadas en salsa a tu elección.</p>
+              <span class="platillo__tag">Elige tu salsa: Roja, Verde o Mole</span>
+            </div>
+            <span class="platillo__precio">$150</span>
+          </article>
+        </div>
+      </div>
+
+      <!-- Del Mar -->
+      <div class="menu-categoria" id="cat-mar">
+        <div class="platillos__lista">
+          <article class="platillo__item platillo__item--destacado">
+            <div class="platillo__info">
+              <h3>Camarones Frida <span class="platillo__badge">Especial</span></h3>
+              <p>Servidos con arroz y ensalada.</p>
+              <span class="platillo__tag">Mantequilla, Empanizados, A la Diabla, Mojo o Ajillo</span>
+            </div>
+            <span class="platillo__precio">$230</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Filete de Pescado Frida</h3>
+              <p>Filete preparado al gusto acompañado de arroz y ensalada.</p>
+              <span class="platillo__tag">Mantequilla, Empanizados, Mojo o Ajillo</span>
+            </div>
+            <span class="platillo__precio">$230</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Cóctel de Camarón o Pulpo</h3>
+              <p>Fresco y al momento, con un toque de salsa especial.</p>
+            </div>
+            <span class="platillo__precio">$140</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Tacos Gobernador</h3>
+              <p>Tortilla de harina rellena de camarones con morrón, jitomate, cebolla y queso.</p>
+            </div>
+            <span class="platillo__precio">$180</span>
+          </article>
+        </div>
+      </div>
+
+      <!-- Parrilladas -->
+      <div class="menu-categoria" id="cat-parrilladas">
+        <p class="menu-categoria__nota">Nuestras parrilladas incluyen: Tortillas, Cuaresmeño Relleno, Cebollas & Nopales Asados.</p>
+        <div class="platillos__lista">
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Parrillada Mixta</h3>
+              <p>Combinación de mariscos y carnes.</p>
+            </div>
+            <div class="platillo__precios-dobles">
+              <span>2 pers. <strong>$400</strong></span>
+              <span>4 pers. <strong>$680</strong></span>
+            </div>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Parrillada de Carne</h3>
+              <p>Combinación de carnes.</p>
+            </div>
+            <div class="platillo__precios-dobles">
+              <span>2 pers. <strong>$360</strong></span>
+              <span>4 pers. <strong>$620</strong></span>
+            </div>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Molcajete Mixto <span class="platillo__badge">Especial</span></h3>
+              <p>Combinación de mariscos y carnes con queso, nopales y cebollitas, bañado en salsa especial de la casa.</p>
+            </div>
+            <span class="platillo__precio">$390</span>
+          </article>
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Rib Eye</h3>
+              <p>Incluye 2 guarniciones a elegir: Verduras a la Parrilla, Papas a la Francesa, Ensalada Verde o Arroz.</p>
+            </div>
+            <span class="platillo__precio">$390</span>
+          </article>
+        </div>
+      </div>
+
+      <!-- Postres -->
+      <div class="menu-categoria" id="cat-postres">
+        <div class="platillos__lista">
+          <article class="platillo__item">
+            <div class="platillo__info">
+              <h3>Roles de Canela</h3>
+              <p>Roles de canela cubiertos de betún.</p>
+            </div>
+            <span class="platillo__precio">$85</span>
+          </article>
+        </div>
+        <div class="menu-categoria__cta">
+          <p>¿Quieres ver el menú completo de postres y bebidas?</p>
+          <a href="menu.html" class="btn btn--ghost">Ver menú completo →</a>
+        </div>
+      </div>
+
+      <div class="menu-preview__cta">
+        <a href="menu.html" class="btn btn--primary">Ver menú completo</a>
+        <a href="contacto.html" class="btn btn--secondary">Reservar una mesa</a>
+      </div>
+    </section>
+
+    <!-- EL ESPACIO -->
+    <section id="el-espacio">
+      <header class="section__header">
+        <p class="section__etiqueta">El Espacio</p>
+        <h2>Un Santuario de Luz</h2>
+      </header>
+      <div class="espacio__galeria">
+        <figure class="espacio__figura espacio__figura--large">
+          <img src="https://placehold.co/800x600/1a1c1e/fff?text=Salon+Principal" alt="Salón Principal Casa Frida" loading="lazy">
+        </figure>
+        <figure class="espacio__figura">
+          <img src="https://placehold.co/400x400/91472b/fff?text=Cocina" alt="Cocina Casa Frida" loading="lazy">
+        </figure>
+        <figure class="espacio__figura">
+          <img src="https://placehold.co/400x400/655a49/fff?text=Terraza" alt="Terraza Casa Frida" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- HORARIOS + CTA -->
+    <section id="horarios-cta">
+      <div class="horarios-cta__layout">
+        <div class="horarios__bloque">
+          <p class="section__etiqueta">Horarios</p>
+          <h2>Visítanos</h2>
+          <p class="horarios__intro">Te invitamos a vivir la experiencia de la gastronomía mexicana de autor en un ambiente de quietud y lujo moderno.</p>
+          <div class="horarios__tabla">
+            <div class="horario__fila">
+              <span>Lun – Jue</span>
+              <span>13:00 – 22:00</span>
+            </div>
+            <div class="horario__fila">
+              <span>Vie – Sáb</span>
+              <span>13:00 – 23:00</span>
+            </div>
+            <div class="horario__fila">
+              <span>Domingo</span>
+              <span>13:00 – 20:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="reserva__bloque">
+          <span class="reserva__icono">🗓️</span>
+          <h3>Reservar una Mesa</h3>
+          <p>Reservaciones altamente recomendadas, con apertura de 30 días de anticipación.</p>
+          <a href="contacto.html" class="btn btn--primary">Reservar mi Experiencia</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/components/navbar.js"></script>
+  <script type="module" src="js/components/footer.js"></script>
+  <script type="module" src="js/restaurante.js"></script>
 </body>
 </html>
