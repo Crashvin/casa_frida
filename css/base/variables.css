@@ -1,15 +1,15 @@
 :root {
   /* === COLORS === */
-  --color-primary:#91472b;
-  --color-primary-dark:#7a3a20;
-  --color-primary-light:#ffb59b;
-  --color-primary-container:#af5f41;
+  --color-primary:#153C6B;
+  --color-primary-dark:#0B2441;
+  --color-primary-light:#ABC4E3;
+  --color-primary-container:#24548F;
 
-  --color-secondary:#5c614d;
-  --color-secondary-container: #e0e5cc;
+  --color-secondary:#566B85;
+  --color-secondary-container: #DCE6F0;
 
-  --color-tertiary:#655a49;
-  --color-tertiary-container:#7f7360;
+  --color-tertiary:#A67C3D;
+  --color-tertiary-container:#C9A46B;
 
   --color-neutral-bg:#f9f9fb;
   --color-neutral-surface:#edeef0;

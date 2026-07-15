@@ -200,6 +200,7 @@
 
 .calendario__encabezado {
   margin-bottom: var(--space-3);
+  text-align: center;
 }
 
 .calendario__encabezado h3 {
@@ -367,6 +368,7 @@
 /* === FORMULARIO === */
 .formulario__encabezado {
   margin-bottom: var(--space-5);
+  text-align: center;
 }
 
 .formulario__encabezado h3 {
