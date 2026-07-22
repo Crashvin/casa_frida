@@ -61,4 +61,8 @@
     padding: var(--space-2) var(--space-4);
     font-size: 0.75rem;
   }
+
+  .btn--ghost {
+    padding: var(--space-2) 0;
+  }
 }

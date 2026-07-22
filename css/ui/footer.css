@@ -70,7 +70,11 @@
 
 /* === MOBILE === */
 @media (max-width: 768px) {
-  .footer__top { 
+  .footer {
+    padding: var(--space-6) var(--margin-mobile);
+  }
+
+  .footer__top {
     flex-direction: column;
   }
 }

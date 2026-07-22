@@ -324,7 +324,7 @@
   background: var(--color-primary);
   color: #fff;
   font-weight: var(--font-semibold);
-  box-shadow: 0 2px 8px rgba(145, 71, 43, 0.4);
+  box-shadow: 0 2px 8px rgba(21, 60, 107, 0.4);
 }
 
 .calendario__dia--pasado {
@@ -671,6 +671,16 @@
     max-width: 100%;
     margin-top: var(--space-4);
   }
+
+  .servicios__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .servicios__testimonio {
+    left: var(--space-4);
+  }
 }
 
 /* === MOBILE === */
@@ -696,6 +706,25 @@
 
   .calendario__wrapper {
     position: static;
+  }
+
+  .calendario__container {
+    padding: var(--space-3);
+  }
+
+  .calendario__dia {
+    font-size: var(--font-size-caption);
+  }
+
+  .calendario__dia--ocupado::after {
+    width: 12px;
+    height: 12px;
+    top: 2px;
+    right: 2px;
+  }
+
+  .calendario__dias-semana span {
+    padding: 0;
   }
 
   .formulario__grupo--doble {

@@ -112,6 +112,7 @@
 
 .menu-preview__cta {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-3);
   margin-top: var(--space-8);
   padding-top: var(--space-6);
@@ -593,6 +594,10 @@
   .menu-sticky-nav--fixed {
     padding: 0 var(--margin-mobile);
     top: 64px;
+  }
+
+  .menu-seccion__grid--parrilladas .parrillada__header {
+    display: none;
   }
 
   .platillo__item--parrillada {

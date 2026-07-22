@@ -84,7 +84,7 @@
   }
 
   .hero__titulo {
-    font-size: var(--font-size-headline-xl);
+    font-size: var(--font-size-headline-md);
   }
 
   .hero__subtitulo {

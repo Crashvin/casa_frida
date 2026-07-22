@@ -172,8 +172,9 @@
 
   /* Botón cerrar */
   .navbar__cerrar {
-    align-self: flex-end;
-    font-size: var(--font-size-body-lg);
+    display: flex !important;
+    align-self: center;
+    font-size: var(--font-size-headline-lg);
     font-weight: var(--font-bold);
     color: var(--color-neutral-text);
     background: none;

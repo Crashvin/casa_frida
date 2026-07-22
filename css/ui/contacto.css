@@ -169,7 +169,7 @@
 
 .contacto-directo__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-5);
   margin-top: var(--space-8);
 }
@@ -468,6 +468,10 @@
     gap: var(--space-4);
     text-align: center;
   }
+
+  .redes__link {
+    padding: var(--space-2) 0;
+  }
 }
 
 /* === MOBILE === */
@@ -500,5 +504,14 @@
 
   .formulario__grupo--doble {
     grid-template-columns: 1fr;
+  }
+
+  .contacto-header__figura img {
+    height: 280px;
+  }
+
+  .ubicacion__mapa,
+  .ubicacion__mapa iframe {
+    min-height: 260px;
   }
 }
