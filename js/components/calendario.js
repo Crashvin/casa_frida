@@ -1,5 +1,6 @@
 const CALENDAR_API_KEY = 'AIzaSyB4KH_iAgk3rlx4aWsAvxqoe4XmHhUT8II';
 const CALENDAR_ID      = 'casafridaeventostepotzotlan@gmail.com';
+const CALENDAR_API_URL = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events`;
 
 // Estado del calendario
 let fechasOcupadas     = [];
