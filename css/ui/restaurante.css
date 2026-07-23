@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('https://placehold.co/1920x1080/1a1c1e/fff?text=Casa+Frida');
+  background-image: url('/assets/casa-frida/restaurante_1.jpg');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -30,6 +30,15 @@
   gap: var(--space-5);
   padding: 0 var(--margin-desktop);
 }
+
+.hero__titulo {
+  color: #fff;
+}
+
+.hero__etiqueta {
+  color: #fff;
+}
+
 
 /* === MENÚ PREVIEW === */
 #menu-preview {

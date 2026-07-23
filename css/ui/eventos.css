@@ -5,7 +5,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('https://placehold.co/1920x1080/1a1c1e/fff?text=Casa+Frida+Eventos');
+  background-image: url('/assets/casa-frida/jardin_1.png');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -32,6 +32,18 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+}
+
+.hero__titulo {
+  color: #fff;
+}
+
+.hero__etiqueta {
+  color: #fff;
+}
+
+.hero__subtitulo {
+  color: #fff;
 }
 
 /* === TIPOS DE EVENTO === */

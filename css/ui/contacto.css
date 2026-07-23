@@ -54,7 +54,7 @@
   font-family: var(--font-primary);
   font-size: var(--font-size-body-lg);
   font-style: italic;
-  color: var(--color-primary-light);
+  color: #fff;
   text-align: center;
   background: rgba(0,0,0,0.4);
   backdrop-filter: blur(8px);
