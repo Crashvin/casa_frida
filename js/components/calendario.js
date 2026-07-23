@@ -1,5 +1,5 @@
-const CALENDAR_API_KEY = CONFIG.CALENDAR_API_KEY;
-const CALENDAR_ID      = CONFIG.CALENDAR_ID;
+const CALENDAR_API_KEY = 'AIzaSyB4KH_iAgk3rlx4aWsAvxqoe4XmHhUT8II';
+const CALENDAR_ID      = 'casafridaeventostepotzotlan@gmail.com';
 
 // Estado del calendario
 let fechasOcupadas     = [];

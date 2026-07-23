@@ -63,7 +63,7 @@ function crearNavbar() {
   const redes = [
     {
       texto: "Instagram",
-      href: "https://www.instagram.com/casafrida_tepotzotlan/",
+      href: "https://www.instagram.com/casafrida_tepotzotlan?igsh=bjltNm5haGFmZnpy",
     },
     {
       texto: "Facebook",
