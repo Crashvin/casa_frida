@@ -31,14 +31,6 @@
   transition: var(--transition-default);
 }
 
-.navbar .navbar__logo-img {
-  filter: brightness(0) invert(1);
-}
-
-.navbar--scrolled .navbar__logo-img {
-  filter: none;
-}
-
 .navbar__links { 
     display: flex;
     gap: var(--space-4);
