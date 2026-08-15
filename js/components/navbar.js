@@ -12,10 +12,16 @@ function crearNavbar() {
   nav.classList.add("navbar");
   nav.setAttribute("id", "navbar");
 
-  const logo = document.createElement("a");
-  logo.setAttribute("href", "index.html");
-  logo.classList.add("navbar__logo");
-  logo.textContent = "Casa Frida";
+  const logo = document.createElement('a');
+logo.setAttribute('href', 'index.html');
+logo.classList.add('navbar__logo');
+
+const logoImg = document.createElement('img');
+logoImg.setAttribute('src', 'assets/brand/casafrida_white.svg');
+logoImg.setAttribute('alt', 'Casa Frida');
+logoImg.classList.add('navbar__logo-img');
+
+logo.appendChild(logoImg);
 
   const ul = document.createElement("ul");
   ul.classList.add("navbar__links");
