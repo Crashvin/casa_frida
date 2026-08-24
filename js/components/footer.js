@@ -12,7 +12,7 @@ const footerConectar = [
   { texto: 'FAQ',                 href: '#faq' },
   { texto: 'Instagram',           href: 'https://instagram.com/casafrida' },
   { texto: 'Facebook',            href: 'https://facebook.com/casafrida' },
-  { texto: 'Trabaja con nosotros',href: 'mailto:contacto@casafrida.mx' },
+  { texto: 'Trabaja con nosotros',href: 'mailto:contacto@casafrida.com.mx' },
 ];
 
 const footerVisitar = {

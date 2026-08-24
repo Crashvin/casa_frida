@@ -6,7 +6,7 @@
   display: flex;
   align-items: flex-end;
   padding-bottom: var(--space-10);
-  background-image: url('/assets/casa-frida/nosotros_casa_frida.jpg');
+  background-image: url('/assets/casa-frida/1920x1080/hero_nosotros.webp');
   background-size: cover;
   background-position: center top;
   overflow: hidden;
