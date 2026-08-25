@@ -537,7 +537,7 @@
 
 /* === MENÚ CTA FINAL === */
 #menu-cta {
-  background: var(--color-primary-dark);
+  background: var(--color-primary-container);
   padding: var(--section-gap) var(--margin-desktop);
   text-align: center;
 }

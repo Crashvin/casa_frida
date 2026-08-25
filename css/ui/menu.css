@@ -2,7 +2,7 @@
 
 .section__etiqueta {
   font-family: var(--font-secondary);
-  font-size: var(--font-size-label-md);
+  font-size: var(--font-size-headline-sm);
   font-weight: var(--font-semibold);
   letter-spacing: 0.15em;
   text-transform: uppercase;
